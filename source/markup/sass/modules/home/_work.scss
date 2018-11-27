@@ -1,0 +1,16 @@
+.home-work {
+ height: 574px;
+
+ .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: url(../img/home/work/home-work.jpg) no-repeat center / cover;
+  padding: 40px 83px;
+ }
+
+ .home-work__btn {
+  margin-top: 70px;
+ }
+}

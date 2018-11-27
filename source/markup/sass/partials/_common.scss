@@ -1,0 +1,90 @@
+.banner {
+ width: 100vw;
+ height: 100vh;
+ background: no-repeat center / cover;
+}
+
+.title-big {
+ font-size: 64px;
+ font-weight: 900;
+ line-height: 66px;
+ letter-spacing: -0.96px;
+}
+
+.title {
+ color: #4069be;
+ font-size: 42px;
+ font-weight: 600;
+ line-height: 44px;
+ letter-spacing: -0.63px;
+
+ &.title--white {
+  color: #fff;
+ }
+}
+
+.caption {
+ display: inline-block;
+ background-color: #ffc744;
+ color: #2f261d;
+ font-size: 10px;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 1.2px;
+ padding: 2px 6px;
+ margin-bottom: 35px;
+}
+
+.logo {
+ display: block;
+ width: 102px;
+ height: 21px;
+ background: url(../img/logo.png) no-repeat center / contain;
+}
+
+.slider-counter {
+ font-size: 10px;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 1.2px;
+ position: absolute;
+ bottom: 32px;
+}
+
+.item-arrow {
+ width: 16px;
+ height: 16px;
+ background: url(../img/common/item-arrow.png) no-repeat top right;
+ position: absolute;
+ top: 30px;
+ right: 30px;
+ transition: 0.7s;
+}
+.item-arrow-hover {
+ width: 16px;
+ height: 16px;
+ background: url(../img/common/item-arrow-hover.png) no-repeat top right;
+ position: absolute;
+ top: 30px;
+ right: 30px;
+ z-index: 2;
+ transition: 0.7s;
+ opacity: 0;
+}
+
+.socials {
+ display: flex;
+ align-items: center;
+
+ .socials__item {
+  width: 26px;
+  height: 26px;
+  display: block;
+  border-radius: 50%;
+  background: no-repeat center / contain;
+  margin-right: 20px;
+  &:last-child {
+   margin-right: 0;
+  }
+ }
+}

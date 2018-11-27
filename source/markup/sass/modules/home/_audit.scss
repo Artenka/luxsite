@@ -1,0 +1,23 @@
+.home-audit {
+ height: 574px;
+
+ .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: url(../img/home/audit/home-audit.jpg) no-repeat center / cover;
+  padding: 40px 83px;
+ }
+
+ .home-audit__title {
+
+  span {
+   color: #fbb144;
+  }
+ }
+
+ .home-audit__btn {
+  margin-top: 63px;
+ }
+}

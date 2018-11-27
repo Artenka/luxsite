@@ -1,0 +1,35 @@
+section.section.home-reviews
+  .main-content
+    h3.caption.home-reviews__caption Отзывы клиентов
+    h2.title.home-reviews__title Узнай что говорят предприниматели<br> которым мы помогли
+
+    .home-reviews-slider.slick-slider--arrow-blue
+      .home-reviews-slide
+        .home-review
+          .home-review__avatar(style="background-image: url(img/home/team/home-team-item.jpg)")
+          .home-review__content
+            h2.home-review__title Основатель Компании
+            h3.home-review__position ЛИНИЯ ОКОН
+            p.home-review__text Искренние слова благодарности команде компании «LuxSite». Мы довольны совместной работе. Все наши пожелания и просьбы никогда не оставались без внимания. Ребята разработали нам качественный сайт, а сейчас продвигают его.
+      .home-reviews-slide
+        .home-review
+          .home-review__avatar(style="background-image: url(img/home/team/home-team-item.jpg)")
+          .home-review__content
+            h2.home-review__title Основатель Компании
+            h3.home-review__position ЛИНИЯ ОКОН
+            p.home-review__text Искренние слова благодарности команде компании «LuxSite». Мы довольны совместной работе. Все наши пожелания и просьбы никогда не оставались без внимания. Ребята разработали нам качественный сайт, а сейчас продвигают его.
+
+    .slider-counter.home-reviews-slider-counter 1/1
+
+script.
+  $(function () {
+    $('.home-reviews-slider').slick({
+      adaptiveHeight: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      variableWidth: true
+    });
+  });

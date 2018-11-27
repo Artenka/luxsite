@@ -1,0 +1,19 @@
+.home-intro {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ background-image: url(../img/home/intro/home-intro.jpg);
+ padding: 40px 270px 247px;
+ position: relative;
+
+ .home-intro__title {
+  width: 100%;
+  color: #fff;
+ }
+ .home-intro__text {
+  width: 100%;
+  color: #fff;
+  margin-top: 35px;
+ }
+}

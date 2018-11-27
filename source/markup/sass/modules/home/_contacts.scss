@@ -1,0 +1,44 @@
+.home-contacts {
+
+ .main-content {
+  background: url(../img/home/contacts/home-contacts-map.jpg) no-repeat center / cover;
+ }
+
+ .home-contacts__info {
+  width: 500px;
+  background: linear-gradient(to right, #f9f9f9 0%, #f9f9f9 65%, transparent 100%);
+  padding: 110px 0 100px 83px;
+  position: relative;
+  z-index: 2;
+ }
+
+ .home-contacts__caption {
+  margin: 0;
+ }
+
+ .home-contacts__phone {
+  display: block;
+  color: #3f68b9;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.48px;
+  margin: 40px 0 20px;
+ }
+
+ .home-contacts__text {
+  display: block;
+  color: #2f261d;
+  font-family: FuturaPTBook, sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+ }
+
+ .home-contacts__email {
+  display: block;
+  color: #fbb144;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.48px;
+  margin-top: 45px;
+ }
+}

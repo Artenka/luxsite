@@ -1,0 +1,20 @@
+.home-action {
+ height: 460px;
+
+ .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: url(../img/home/action/home-action.jpg) no-repeat center / cover;
+  padding: 40px 83px;
+ }
+
+ .home-action__title {
+
+ }
+
+ .home-action__btn {
+  margin-top: 60px;
+ }
+}

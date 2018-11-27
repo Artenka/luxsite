@@ -1,0 +1,41 @@
+section.section.home-blog
+  .main-content
+    h3.caption.home-blog__caption Блог
+    h2.title.home-blog__title Делимся только лучшей информацией<br> которую проверили на своем опыте
+
+    .home-blog-slider.slick-slider--arrow-blue
+      .home-blog-slide
+        a(href="#").home-blog-item
+          h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
+          h3.home-blog-item__date 08.11.2018
+      .home-blog-slide
+        a(href="#").home-blog-item
+          h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
+          h3.home-blog-item__date 08.11.2018
+      .home-blog-slide
+        a(href="#").home-blog-item
+          h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
+          h3.home-blog-item__date 08.11.2018
+      .home-blog-slide
+        a(href="#").home-blog-item
+          h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
+          h3.home-blog-item__date 08.11.2018
+      .home-blog-slide
+        a(href="#").home-blog-item
+          h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
+          h3.home-blog-item__date 08.11.2018
+
+    .slider-counter.home-blog-slider-counter 1/1
+
+script.
+  $(function () {
+    $('.home-blog-slider').slick({
+      adaptiveHeight: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      arrows: true,
+      dots: false,
+      variableWidth: true
+    });
+  });

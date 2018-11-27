@@ -1,0 +1,49 @@
+.slick-slider {
+
+ &.slick-slider--arrow-blue {
+
+  .slick-arrow {
+
+   &.slick-prev {
+    background-image: url(../img/common/arrow-left-blue.png);
+    &:hover {
+     background-image: url(../img/common/arrow-left-black.png);
+    }
+   }
+   &.slick-next {
+    background-image: url(../img/common/arrow-right-blue.png);
+    &:hover {
+     background-image: url(../img/common/arrow-right-black.png);
+    }
+   }
+  }
+ }
+}
+
+.slick-slide {
+ outline: none;
+}
+
+.slick-arrow {
+ width: 18px;
+ height: 6px;
+ background: no-repeat center / contain;
+ font-size: 0;
+ position: absolute;
+ cursor: pointer;
+ outline: none;
+ transition: 0.5s;
+
+ &.slick-prev {
+  background-image: url(../img/common/arrow-left-white.png);
+  &:hover {
+   background-image: url(../img/common/arrow-left-black.png);
+  }
+ }
+ &.slick-next {
+  background-image: url(../img/common/arrow-right-white.png);
+  &:hover {
+   background-image: url(../img/common/arrow-right-black.png);
+  }
+ }
+}

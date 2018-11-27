@@ -1,0 +1,128 @@
+.main-header-layout {
+ width: 100%;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+}
+
+.main-header {
+ background: #fff;
+ position: relative;
+ &:before {
+  content: '';
+  width: 1px;
+  height: 98px;
+  background: rgba(255,255,255,0.5);
+  position: absolute;
+  top: 4px;
+  left: -101px;
+ }
+}
+
+.main-header-row {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.main-header-row-1 {
+ padding: 30px 56px 23px 83px;
+
+ .main-header-row-1__logo {
+  margin-right: 113px;
+ }
+
+ .main-header-row-1__langs {
+  flex: 1;
+  display: flex;
+  align-items: center;
+ }
+
+ .main-header-row-1__lang {
+  color: #2f261d;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.32px;
+  margin-right: 40px;
+  position: relative;
+  &:last-child {
+   margin-right: 0;
+  }
+
+  &.main-header-row-1__lang--active {
+   &:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #ffc830;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+   }
+  }
+ }
+
+ .main-header-row-1__phone {
+  color: #2f261d;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.32px;
+ }
+}
+
+.main-header-row-2 {
+ padding: 0 0 0 83px;
+}
+
+.main-header-menu-1 {
+ flex: 1;
+ display: flex;
+ align-items: center;
+
+ .main-header-menu-1__item {
+  color: #4069be;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.32px;
+  margin-right: 40px;
+  &:hover {
+   opacity: 0.5;
+  }
+  &:last-child {
+   margin-right: 0;
+  }
+ }
+}
+
+.main-header-submit {
+ border-radius: 0;
+}
+
+.main-header-row-3 {
+ border-top: 1px solid rgba(47, 38, 29, 0.05);
+ border-bottom: 1px solid rgba(47, 38, 29, 0.05);
+ padding: 0 45px;
+}
+
+.main-header-menu-2 {
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+
+ .main-header-menu-2__item {
+  display: block;
+  font-family: FuturaPTBook, sans-serif;
+  color: rgba(47, 38, 29, 0.7);
+  font-size: 16px;
+  font-weight: 100;
+  padding: 25px 35px;
+  transition: 0.7s;
+  &:hover {
+   background: #f0f2ff;
+   color: #4069be;
+  }
+ }
+}

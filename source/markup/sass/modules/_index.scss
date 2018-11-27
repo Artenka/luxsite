@@ -1,0 +1,347 @@
+html {
+ min-height: 100vh;
+}
+
+body {
+ background: #ffffff;
+ font-family: FuturaPT, sans-serif;
+ color: #000000;
+ font-size: 18px;
+ line-height: normal;
+ overflow-x: hidden;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ @include mobile {
+  font-size: 12px;
+  line-height: 18px;
+ }
+}
+
+.main-wrapper {
+ width: 1160px;
+ margin: 0 auto;
+ @include tablet {
+  width: 710px;
+ }
+ @include mobile {
+  width: 310px;
+ }
+}
+
+.main {
+ overflow-x: hidden;
+}
+
+.main-content {
+ width: calc(100vw - 190px);
+}
+
+.section {
+ display: flex;
+ justify-content: flex-end;
+}
+
+.br-lg {
+ display: block;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.br-lp {
+ display: none;
+ @include laptop {
+  display: block;
+ }
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.br-lp-md {
+ display: none;
+ @include laptop {
+  display: block;
+ }
+ @include tablet {
+  display: block;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.br-lp-sm {
+ display: none;
+ @include laptop {
+  display: block;
+ }
+ @include tablet {
+  display: block;
+ }
+ @include mobile {
+  display: block;
+ }
+}
+
+.br-lg-md {
+ display: block;
+ @include tablet {
+  display: block;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.br-lg--sm {
+ display: block;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: block;
+ }
+}
+
+.br-md-sm {
+ display: none;
+ @include tablet {
+  display: block;
+ }
+ @include mobile {
+  display: block;
+ }
+}
+
+.br-md {
+ display: none;
+ @include tablet {
+  display: block;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.br-sm {
+ display: none;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: block;
+ }
+}
+
+.br-sm-text {
+ display: none;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: inline;
+ }
+}
+
+.inline-lg {
+ display: inline;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.inline-lp {
+ display: none;
+ @include laptop {
+  display: inline;
+ }
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.inline-lp-md {
+ display: none;
+ @include laptop {
+  display: inline;
+ }
+ @include tablet {
+  display: inline;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.inline-lp-sm {
+ display: none;
+ @include laptop {
+  display: inline;
+ }
+ @include tablet {
+  display: inline;
+ }
+ @include mobile {
+  display: inline;
+ }
+}
+
+.inline-lg-md {
+ display: inline;
+ @include tablet {
+  display: inline;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.inline-md-sm {
+ display: none;
+ @include tablet {
+  display: inline;
+ }
+ @include mobile {
+  display: inline;
+ }
+}
+
+.inline-md {
+ display: none;
+ @include tablet {
+  display: inline;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.inline-sm {
+ display: none;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: inline;
+ }
+}
+
+.hidden {
+ display: none;
+}
+
+.clear {
+ display: table;
+ clear: both;
+}
+
+p, h1, h2, h3, h4, h5, h6, img {
+ display: block;
+}
+
+a {
+ color: #000000;
+ text-decoration: none;
+ cursor: pointer;
+ transition: 0.5s;
+}
+
+button {
+ background: none;
+ border: none;
+ transition: 0.5s;
+}
+
+em {
+ font-style: italic;
+}
+
+b, strong {
+ font-weight: 700;
+}
+
+input, textarea, select, .input, .textarea, .select {
+ width: 100%;
+ display: block;
+ border: none;
+ color: #000000;
+ font-family: AvenirNextCyr, sans-serif;
+ font-size: 18px;
+ font-weight: 500;
+ line-height: 22px;
+ letter-spacing: -0.22px;
+ padding: 22px 57px 25px;
+ outline: none;
+ transition: 0.5s;
+ @include mobile {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.15px;
+  padding: 22px 23px;
+ }
+}
+
+textarea {
+ resize: none;
+}
+
+.input-normal {
+ box-shadow: 0 12px 44px rgba(0, 0, 0, 0.06);
+ border-radius: 10px;
+ background-color: #000000;
+ color: #000000;
+ font-size: 20px;
+ font-weight: 600;
+ line-height: 27px;
+ padding: 30px 35px;
+ @include mobile {
+  font-size: 13px;
+  line-height: 27px;
+  padding: 15px 26px;
+ }
+}
+
+label {
+ display: block;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+ color: #cccccc;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color: #cccccc;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ color: #cccccc;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #cccccc;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #cccccc;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+ color: #cccccc;
+}
+
+input:-webkit-autofill {
+ -webkit-box-shadow: 0 0 0 30px white inset;
+}
