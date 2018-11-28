@@ -18,6 +18,17 @@
  display: flex;
  align-items: flex-start;
  margin-bottom: 60px;
+ position: relative;
+ cursor: pointer;
+ &:hover {
+
+  .home-portfolio-item__title {
+   color: #426bbb;
+  }
+  .home-portfolio-item__image {
+   opacity: 1;
+  }
+ }
  &:last-child {
   margin-bottom: 0;
  }
@@ -32,6 +43,8 @@
 
  .home-portfolio-item__content {
   flex: 1;
+  position: relative;
+  z-index: 2;
  }
 
  .home-portfolio-item__title {
@@ -41,9 +54,9 @@
   letter-spacing: -1.26px;
   transition: 0.7s;
   cursor: pointer;
-  &:hover {
-   color: #426bbb;
-  }
+  //&:hover {
+  // color: #426bbb;
+  //}
  }
 
  .home-portfolio-item__tags {
@@ -73,6 +86,13 @@
  }
 
  .home-portfolio-item__image {
-
+  width: 343px;
+  height: 261px;
+  background: no-repeat center / contain;
+  position: absolute;
+  top: calc(50% - 130px);
+  left: 440px;
+  opacity: 0;
+  transition: 1s;
  }
 }
