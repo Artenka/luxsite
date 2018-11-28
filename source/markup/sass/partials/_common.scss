@@ -17,6 +17,10 @@
  font-weight: 600;
  line-height: 44px;
  letter-spacing: -0.63px;
+ @include tablet {
+  font-size: 38px;
+  letter-spacing: -1.26px;
+ }
 
  &.title--white {
   color: #fff;

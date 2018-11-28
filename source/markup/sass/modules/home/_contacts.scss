@@ -11,6 +11,9 @@
   padding: 110px 0 100px 83px;
   position: relative;
   z-index: 2;
+  @include tablet {
+   padding: 110px 0 100px 70px;
+  }
  }
 
  .home-contacts__map {

@@ -7,6 +7,9 @@
 
  .home-services__title, .home-services__caption {
   margin-left: 83px;
+  @include tablet {
+   margin-left: 70px;
+  }
  }
 }
 
@@ -15,6 +18,9 @@
  flex-wrap: wrap;
  border-top: 1px solid rgba(255,255,255,0.1);
  margin-top: 60px;
+ @include tablet {
+  margin: 60px 65px 0 35px;
+ }
 }
 
 .home-services-item {
@@ -25,6 +31,12 @@
  position: relative;
  transition: 0.7s;
  cursor: pointer;
+ @include tablet {
+  width: 50%;
+  border-left: 1px solid rgba(255,255,255,0.1);
+  border-right: none;
+  padding: 50px 35px;
+ }
  &:before {
   @extend .item-arrow;
   content: '';
@@ -40,10 +52,20 @@
  &:nth-child(3n+1) {
   width: 38%;
   padding-left: 124px;
+  @include tablet {
+   width: 50%;
+   padding: 50px 35px;
+  }
  }
  &:nth-child(3n+3) {
   width: 33%;
   border-right: none;
+  @include tablet {
+   width: 50%;
+  }
+ }
+ &:nth-child(2n+2) {
+  border-right: 1px solid rgba(255,255,255,0.1);
  }
  &:hover {
   box-shadow: 2px 3px 10px rgba(16, 73, 130, 0.2);

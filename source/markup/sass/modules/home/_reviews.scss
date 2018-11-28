@@ -11,11 +11,17 @@
    position: absolute;
    bottom: 0;
    left: 674px;
+   @include tablet {
+    left: 524px;
+   }
   }
  }
 
  .home-reviews__title, .home-reviews__caption {
   margin-left: 83px;
+  @include tablet {
+   margin-left: 70px;
+  }
  }
 }
 
@@ -24,15 +30,24 @@
  border-bottom: 1px solid #f2f2f2;
  padding-left: 30px;
  margin-top: 45px;
+ @include tablet {
+  padding-left: 5px;
+ }
 
  .slick-arrow {
   bottom: -41px;
 
   &.slick-prev {
    left: 567px;
+   @include tablet {
+    left: 409px;
+   }
   }
   &.slick-next {
    left: 766px;
+   @include tablet {
+    left: 608px;
+   }
   }
  }
 }
@@ -41,6 +56,9 @@
  width: 645px;
  border-right: 1px solid #f2f2f2;
  padding: 70px 70px 55px 65px;
+ @include tablet {
+  width: 520px;
+ }
 
  &.slick-current {
 
@@ -62,6 +80,9 @@
 .home-review {
  display: flex;
  align-items: flex-start;
+ @include tablet-mobile {
+  flex-direction: column;
+ }
 
  .home-review__avatar {
   width: 60px;
@@ -69,6 +90,9 @@
   border-radius: 50%;
   background: no-repeat center / cover;
   margin-right: 72px;
+  @include tablet {
+   margin: 0 0 30px;
+  }
  }
 
  .home-review__content {
@@ -105,4 +129,7 @@
 
 .home-reviews-slider-counter {
  left: 85px;
+ @include tablet {
+  left: 70px;
+ }
 }

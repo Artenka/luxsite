@@ -8,6 +8,9 @@
   justify-content: center;
   background: url(../img/home/action/home-action.jpg) no-repeat center / cover;
   padding: 40px 83px;
+  @include tablet {
+   padding: 40px 70px;
+  }
  }
 
  .home-action__title {

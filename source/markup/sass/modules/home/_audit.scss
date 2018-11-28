@@ -1,5 +1,8 @@
 .home-audit {
  height: 574px;
+ @include tablet {
+  height: 460px;
+ }
 
  .main-content {
   display: flex;
@@ -8,6 +11,9 @@
   justify-content: center;
   background: url(../img/home/audit/home-audit.jpg) no-repeat center / cover;
   padding: 40px 83px;
+  @include tablet {
+   padding: 90px 30px 90px 70px;
+  }
  }
 
  .home-audit__title {
@@ -19,5 +25,8 @@
 
  .home-audit__btn {
   margin-top: 63px;
+  @include tablet {
+   margin-top: 45px;
+  }
  }
 }

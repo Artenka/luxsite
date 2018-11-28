@@ -1,22 +1,16 @@
-.main-header-layout {
+.section.main-header-layout {
  width: 100%;
  position: absolute;
  bottom: 0;
  left: 0;
+ @include tablet-mobile {
+  display: none;
+ }
 }
 
 .main-header {
  background: #fff;
  position: relative;
- &:before {
-  content: '';
-  width: 1px;
-  height: 98px;
-  background: rgba(255,255,255,0.5);
-  position: absolute;
-  top: 4px;
-  left: -101px;
- }
 }
 
 .main-header-row {

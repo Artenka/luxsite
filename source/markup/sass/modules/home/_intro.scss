@@ -6,6 +6,21 @@
  background-image: url(../img/home/intro/home-intro.jpg);
  padding: 40px 270px 247px;
  position: relative;
+ @include tablet {
+  padding: 80px 100px;
+ }
+ &:before {
+  content: '';
+  width: 1px;
+  height: 98px;
+  background: rgba(255,255,255,0.5);
+  position: absolute;
+  bottom: 105px;
+  left: 86px;
+  @include tablet {
+   left: 30px;
+  }
+ }
 
  .home-intro__title {
   width: 100%;
@@ -13,6 +28,7 @@
  }
  .home-intro__text {
   width: 100%;
+  font-family: FuturaPTBook, sans-serif;
   color: #fff;
   margin-top: 35px;
  }

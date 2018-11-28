@@ -1,5 +1,8 @@
 .home-work {
  height: 574px;
+ @include tablet {
+  height: 460px;
+ }
 
  .main-content {
   display: flex;
@@ -8,6 +11,9 @@
   justify-content: center;
   background: url(../img/home/work/home-work.jpg) no-repeat center / cover;
   padding: 40px 83px;
+  @include tablet {
+   padding: 90px 70px;
+  }
  }
 
  .home-work__btn {

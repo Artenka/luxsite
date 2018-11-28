@@ -11,11 +11,17 @@
    position: absolute;
    bottom: 0;
    left: 675px;
+   @include tablet {
+    left: 347px;
+   }
   }
  }
 
  .home-blog__title, .home-blog__caption {
   margin-left: 83px;
+  @include tablet {
+   margin-left: 70px;
+  }
  }
 }
 
@@ -24,15 +30,24 @@
  border-bottom: 1px solid rgba(0,0,0,0.1);
  padding-left: 55px;
  margin-top: 80px;
+ @include tablet {
+  padding-left: 37px;
+ }
 
  .slick-arrow {
   bottom: -41px;
 
   &.slick-prev {
    left: 567px;
+   @include tablet {
+    left: 247px;
+   }
   }
   &.slick-next {
    left: 766px;
+   @include tablet {
+    left: 432px;
+   }
   }
  }
 }
@@ -88,4 +103,7 @@
 
 .home-blog-slider-counter {
  left: 85px;
+ @include tablet {
+  left: 68px;
+ }
 }
