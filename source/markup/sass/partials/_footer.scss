@@ -8,10 +8,14 @@
   color: #426bbb;
   font-size: 14px;
   font-weight: 300;
+  @include mobile {
+   margin-top: 70px;
+  }
  }
 }
 
 .main-footer-title {
+ display: block;
  color: #426bbb;
  font-size: 11px;
  font-weight: 600;
@@ -38,34 +42,54 @@
  @include tablet {
   padding: 110px 30px 80px 70px;
  }
+ @include mobile {
+  padding: 110px 15px 80px;
+ }
 }
 .main-footer-block-2 {
  padding: 80px 83px 110px;
  @include tablet {
   padding: 80px 30px 110px 70px;
  }
+ @include mobile {
+  padding: 80px 15px 110px;
+ }
 
  .main-footer-block-2__top, .main-footer-block-2__bottom {
   display: flex;
   align-items: flex-start;
+  @include mobile {
+   flex-direction: column;
+  }
  }
 
  .main-footer-block-2__bottom {
   justify-content: space-between;
   margin-top: 70px;
+  @include mobile {
+   align-items: center;
+  }
  }
 }
 
 .main-footer-offices {
+ @extend .hidden-scroll;
  display: flex;
  align-items: flex-start;
  margin-top: 55px;
+ @include mobile {
+  width: 290px;
+  overflow-x: auto;
+ }
 
  .main-footer-offices__item {
   margin-right: 110px;
 
   p {
    margin-bottom: 10px;
+   @include mobile {
+    width: 125px;
+   }
   }
  }
 }
@@ -75,8 +99,11 @@
  @include tablet {
   margin-right: 110px;
  }
+ @include mobile {
+  margin: 0 0 50px;
+ }
  &:last-child {
-  margin-right: 0;
+  margin: 0;
  }
 }
 
@@ -93,6 +120,14 @@
  flex-direction: column;
  align-items: flex-start;
  margin-right: 75px;
+ @include mobile {
+  margin-right: 50px;
+ }
+ &:first-child {
+  @include mobile {
+   width: 140px;
+  }
+ }
  &:last-child {
   margin-right: 0;
  }

@@ -3,6 +3,9 @@
  .main-content {
   padding: 110px 0 75px;
   position: relative;
+  @include mobile {
+   padding: 80px 0 75px;
+  }
   &:before {
    content: '';
    width: 1px;
@@ -22,6 +25,10 @@
   @include tablet {
    margin-left: 70px;
   }
+  @include mobile {
+   margin-left: 15px;
+   margin-right: 15px;
+  }
  }
 }
 
@@ -33,6 +40,10 @@
  @include tablet {
   padding-left: 5px;
  }
+ @include mobile {
+  padding: 0;
+  margin-top: 55px;
+ }
 
  .slick-arrow {
   bottom: -41px;
@@ -42,11 +53,17 @@
    @include tablet {
     left: 409px;
    }
+   @include mobile {
+    left: 80px;
+   }
   }
   &.slick-next {
    left: 766px;
    @include tablet {
     left: 608px;
+   }
+   @include mobile {
+    left: 222px;
    }
   }
  }
@@ -58,6 +75,11 @@
  padding: 70px 70px 55px 65px;
  @include tablet {
   width: 520px;
+ }
+ @include mobile {
+  width: 320px;
+  border: none;
+  padding: 70px 35px 55px;
  }
 
  &.slick-current {
@@ -90,7 +112,7 @@
   border-radius: 50%;
   background: no-repeat center / cover;
   margin-right: 72px;
-  @include tablet {
+  @include tablet-mobile {
    margin: 0 0 30px;
   }
  }

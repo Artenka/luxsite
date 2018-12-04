@@ -1,6 +1,6 @@
 .home-work {
  height: 574px;
- @include tablet {
+ @include tablet-mobile {
   height: 460px;
  }
 
@@ -14,9 +14,16 @@
   @include tablet {
    padding: 90px 70px;
   }
+  @include mobile {
+   padding: 70px 15px;
+  }
  }
 
  .home-work__btn {
   margin-top: 70px;
+  @include mobile {
+   width: 260px;
+   margin: 45px auto 0;
+  }
  }
 }

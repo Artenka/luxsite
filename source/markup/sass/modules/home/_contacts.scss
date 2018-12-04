@@ -1,8 +1,11 @@
 .home-contacts {
 
  .main-content {
-  //background: url(../img/home/contacts/home-contacts-map.jpg) no-repeat center / cover;
+  background: #fafafa;
   position: relative;
+  @include mobile {
+   padding: 0;
+  }
  }
 
  .home-contacts__info {
@@ -13,6 +16,12 @@
   z-index: 2;
   @include tablet {
    padding: 110px 0 100px 70px;
+  }
+  @include mobile {
+   width: 100%;
+   background: linear-gradient(to bottom, rgba(250, 250, 250, 1) 0%, rgba(250, 250, 250, 0.9) 50%);
+   padding: 110px 15px 0;
+   margin-bottom: 225px;
   }
  }
 

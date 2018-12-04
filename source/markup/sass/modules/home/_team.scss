@@ -6,32 +6,46 @@
   @include tablet {
    padding: 110px 40px 100px 70px;
   }
+  @include mobile {
+   padding: 110px 15px;
+  }
  }
 
  .home-team__more {
   margin-top: 65px;
+  @include mobile {
+   width: 260px;
+   display: block;
+   margin: 65px auto 0;
+  }
  }
 }
 
 .home-team-list {
+ @extend .hidden-scroll;
  display: flex;
- flex-wrap: wrap;
  margin-top: 60px;
+ overflow-x: auto;
+ @include tablet {
+  width: 624px;
+ }
+ @include mobile {
+  width: 290px;
+ }
 }
 
 .home-team-item {
  width: 155px;
  margin-right: 80px;
- &:nth-child(3) {
-  @include tablet {
-   display: none;
-  }
+ @include mobile {
+  margin-right: 60px;
  }
  &:last-child {
   margin-right: 0;
  }
 
  .home-team-item__thumb {
+  width: 155px;
   height: 190px;
   background: no-repeat center / cover;
  }

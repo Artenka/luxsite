@@ -1,10 +1,16 @@
 .home-about {
  padding: 118px 0 75px;
+ @include mobile {
+  padding: 120px 0 0;
+ }
 
  .home-about__title {
   padding-left: 83px;
   @include tablet {
    padding-left: 70px;
+  }
+  @include mobile {
+   padding: 0;
   }
  }
 }
@@ -17,6 +23,9 @@
  @include tablet {
   margin-left: 30px;
  }
+ @include mobile {
+  flex-direction: column;
+ }
 }
 
 .home-about-item {
@@ -26,8 +35,17 @@
  @include tablet {
   padding: 48px 40px 26px;
  }
+ @include mobile {
+  padding: 45px 0 30px;
+ }
+ @include mobile {
+  width: 100%;
+ }
  &:nth-child(odd) {
   border-right: 1px solid #f2f2f2;
+  @include mobile {
+   border-right: 0;
+  }
  }
 
  .home-about-item__title {
@@ -41,5 +59,8 @@
   font-size: 18px;
   font-weight: 300;
   margin-top: 24px;
+  @include mobile {
+   line-height: 20px;
+  }
  }
 }

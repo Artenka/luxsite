@@ -11,6 +11,9 @@
   @include tablet {
    padding: 40px 70px;
   }
+  @include mobile {
+   padding: 40px 15px;
+  }
  }
 
  .home-action__title {
@@ -19,5 +22,9 @@
 
  .home-action__btn {
   margin-top: 60px;
+  @include mobile {
+   width: 260px;
+   margin: 40px auto 0;
+  }
  }
 }

@@ -11,10 +11,6 @@ body {
  overflow-x: hidden;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
- @include mobile {
-  font-size: 12px;
-  line-height: 18px;
- }
 }
 
 .main-wrapper {
@@ -36,6 +32,11 @@ body {
  width: calc(100vw - 190px);
  @include tablet {
   width: calc(100vw - 30px);
+ }
+ @include mobile {
+  width: 320px;
+  padding: 0 15px;
+  margin: 0 auto;
  }
 }
 

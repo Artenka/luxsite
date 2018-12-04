@@ -1,6 +1,6 @@
 .home-audit {
  height: 574px;
- @include tablet {
+ @include tablet-mobile {
   height: 460px;
  }
 
@@ -13,6 +13,9 @@
   padding: 40px 83px;
   @include tablet {
    padding: 90px 30px 90px 70px;
+  }
+  @include mobile {
+   padding: 70px 15px;
   }
  }
 
@@ -27,6 +30,10 @@
   margin-top: 63px;
   @include tablet {
    margin-top: 45px;
+  }
+  @include mobile {
+   width: 260px;
+   margin: 45px auto 0;
   }
  }
 }
