@@ -7,7 +7,7 @@ header.main-header-layout.section
           a(href="#").main-header-row-1__lang.main-header-row-1__lang--active ru
           a(href="#").main-header-row-1__lang en
         a(href="tel:+38(044)3039828").main-header-row-1__phone +38 (044) 303 98 28
-        button.main-header-submit.btn ОСтавить заявку
+        button(onclick="showPopup('#popup-brief')").popup-link.main-header-submit.btn ОСтавить заявку
 
       .main-header-row.main-header-row-2
         .main-header-menu-1
@@ -17,20 +17,20 @@ header.main-header-layout.section
           a(href="#blog").main-header-menu-1__item.link-smooth блог
           a(href="#team").main-header-menu-1__item.link-smooth Вакансии
           a(href="#contacts").main-header-menu-1__item.link-smooth контакты
-        button.main-header-submit.btn ОСтавить заявку
+        button(onclick="showPopup('#popup-brief')").popup-link.main-header-submit.btn ОСтавить заявку
 
       .main-header-row.main-header-row-3
         .main-header-menu-2
           .main-header-menu-2__item
-            a(href="#") Разработка сайта
+            a(href="#").main-header-menu-2__item-link Разработка сайта
           .main-header-menu-2__item
-            a(href="#") Продвижение сайта
+            a(href="#").main-header-menu-2__item-link Продвижение сайта
           .main-header-menu-2__item
-            a(href="#") Контекстная реклама
+            a(href="#").main-header-menu-2__item-link Контекстная реклама
           .main-header-menu-2__item
-            a(href="#") Техподдержка
+            a(href="#").main-header-menu-2__item-link Техподдержка
           .main-header-menu-2__item.main-header-menu-2__item--submenu
-            a(href="#") Интернет маркетинг
+            .main-header-menu-2__item-link Интернет маркетинг
             .main-header-menu-2-submenu
               a(href="#").main-header-menu-2-submenu__item Маркетолог
               a(href="#").main-header-menu-2-submenu__item Аудит
@@ -48,4 +48,10 @@ script.
       $(this).toggleClass('header-burger--active');
       $(this).closest('.main-header-layout').toggleClass('main-header-layout--active');
     });
+
+    if ($(window).width() < 1240) {
+      $('.main-header-menu-2__item-link').click(function(){
+        $(this).next('.main-header-menu-2-submenu').slideToggle(300);
+      });
+    }
   });

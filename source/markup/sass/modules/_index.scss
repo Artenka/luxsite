@@ -281,41 +281,18 @@ input, textarea, select, .input, .textarea, .select {
  width: 100%;
  display: block;
  border: none;
- color: #000000;
- font-family: AvenirNextCyr, sans-serif;
+ border-bottom: 1px solid rgba(64, 105, 190, 0.5);
+ color: #104982;
+ font-family: FuturaPT, sans-serif;
  font-size: 18px;
- font-weight: 500;
- line-height: 22px;
- letter-spacing: -0.22px;
- padding: 22px 57px 25px;
+ padding: 14px 0;
  outline: none;
  transition: 0.5s;
- @include mobile {
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: -0.15px;
-  padding: 22px 23px;
- }
 }
 
 textarea {
+ height: 52px;
  resize: none;
-}
-
-.input-normal {
- box-shadow: 0 12px 44px rgba(0, 0, 0, 0.06);
- border-radius: 10px;
- background-color: #000000;
- color: #000000;
- font-size: 20px;
- font-weight: 600;
- line-height: 27px;
- padding: 30px 35px;
- @include mobile {
-  font-size: 13px;
-  line-height: 27px;
-  padding: 15px 26px;
- }
 }
 
 label {
@@ -323,29 +300,69 @@ label {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
- color: #cccccc;
+ color: rgba(16, 73, 130, 0.5);
 }
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
- color: #cccccc;
+ color: rgba(16, 73, 130, 0.5);
 }
 
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
- color: #cccccc;
+ color: rgba(16, 73, 130, 0.5);
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
- color: #cccccc;
+ color: rgba(16, 73, 130, 0.5);
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
- color: #cccccc;
+ color: rgba(16, 73, 130, 0.5);
 }
 
 ::placeholder { /* Most modern browsers support this now. */
- color: #cccccc;
+ color: rgba(16, 73, 130, 0.5);
 }
 
 input:-webkit-autofill {
  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+
+.custom-radio {
+ display: flex;
+ align-items: center;
+ position: relative;
+
+ input[type="radio"] {
+  width: 0;
+  height: 0;
+  padding: 0;
+  position: absolute;
+  opacity: 0;
+
+  &:checked {
+
+   + label {
+    background: #498bfc;
+    color: #fff;
+   }
+  }
+ }
+
+ label {
+  border-radius: 4px;
+  border: 1px solid #498bfc;
+  color: #4069be;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  transition: 0.5s;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  @include mobile {
+   text-transform: none;
+  }
+ }
 }

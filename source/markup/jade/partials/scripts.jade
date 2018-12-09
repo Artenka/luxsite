@@ -1,5 +1,6 @@
 script(src='js/intlTelInput.min.js' type='text/javascript')
 script(src='js/slick.min.js' type='text/javascript')
+script(src='js/TweenMax.min.js' type='text/javascript')
 
 script.
   $(function () {
@@ -12,12 +13,12 @@ script.
     });
 
     //popup link
-    $("body").click(function () {
-      hidePopup();
-    });
-    $(".popup, .popup-link").click(function (e) {
-      e.stopPropagation();
-    });
+    //$("body").click(function () {
+    //  hidePopup();
+    //});
+    //$(".popup, .popup-link").click(function (e) {
+    //  e.stopPropagation();
+    //});
 
     $('.popup__close').click(function () {
       hidePopup();
@@ -40,6 +41,61 @@ script.
       preferredCountries: ['ua', 'ru', 'by', 'kz']
     });
 
+    // disable hovers on mobile
+    function hasTouch() {
+      return 'ontouchstart' in document.documentElement
+              || navigator.maxTouchPoints > 0
+              || navigator.msMaxTouchPoints > 0;
+    }
+    if (hasTouch()) { // remove all :hover stylesheets
+      try { // prevent exception on browsers not supporting DOM styleSheets properly
+        for (var si in document.styleSheets) {
+          var styleSheet = document.styleSheets[si];
+          if (!styleSheet.rules) continue;
+
+          for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+            if (!styleSheet.rules[ri].selectorText) continue;
+
+            if (styleSheet.rules[ri].selectorText.match(':hover')) {
+              styleSheet.deleteRule(ri);
+            }
+          }
+        }
+      } catch (ex) {
+      }
+    }
+
+    // input label animation
+    $('.forminput__input').focus(function () {
+      TweenMax.to($(this).closest('.forminput').find('.forminput__label'), 0.3, {
+        top: '-14px',
+        //scaleX: 0.75,
+        scaleY: 0.8,
+        ease: Power1.easeInOut
+      });
+      $(this).closest('.forminput').addClass('forminput--active');
+    });
+    $('.forminput__input').blur(function () {
+      if ($(this).val() == '') {
+        TweenMax.to($(this).closest('.forminput').find('.forminput__label'), 0.3, {
+          top: '14px',
+          //scaleX: 1,
+          scaleY: 1,
+          ease: Power1.easeInOut
+        });
+        $(this).closest('.forminput').removeClass('forminput--active');
+      }
+    });
+
+    // textarea resize
+    $('textarea').on('keydown', function (e) {
+      var that = $(this);
+      if (that.scrollTop()) {
+        $(this).height(function (i, h) {
+          return h + 23;
+        });
+      }
+    });
   });
 
   function showPopup(popupId) {

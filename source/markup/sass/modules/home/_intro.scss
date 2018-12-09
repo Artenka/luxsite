@@ -6,6 +6,7 @@
  background-image: url(../img/home/intro/home-intro.jpg);
  padding: 40px 270px 247px;
  position: relative;
+ z-index: 10;
  @include tablet {
   padding: 80px 100px;
  }

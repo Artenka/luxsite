@@ -1,0 +1,27 @@
+#popup-audit.popup-layout
+  .popup-scrollarea
+    .popup.popup-audit
+      .popup__close
+      h2.popup-title.popup-title--orange Бесплатный аудит
+      p.popup-text Оставьте свои контактные данные и мы пришлем<br class="br-lg-md"> вам результат аудита
+
+      .formblock
+        h2.formblock__title Ссылка на ваш сайт
+        .formgroup
+          .forminput
+            label.forminput__label Ваша ссылка
+            textarea.forminput__input
+
+      .formblock
+        h2.formblock__title Контактные данные
+        .formgroup.formgroup--2
+          .forminput
+            label.forminput__label Ваше имя
+            input.forminput__input(type="text")
+          .forminput
+            label.forminput__label Номер телефона
+            input.forminput__input(type="text")
+          .forminput
+            label.forminput__label E-mail
+            input.forminput__input(type="text")
+        button(type="submit").btn.btn--orange.form-submit Отправить заявку

@@ -10,6 +10,7 @@
  letter-spacing: 1.32px;
  padding: 23px 56px;
  cursor: pointer;
+ transition: 0.7s;
  @include tablet-mobile {
   font-size: 10px;
   padding: 18px 50px;
