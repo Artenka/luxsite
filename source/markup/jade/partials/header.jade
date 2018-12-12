@@ -63,21 +63,36 @@ script.
     var windowHeight = $(window).height();
     var $header = $('.main-header-layout');
     var lastScrollTop = 0;
-    var st;
+    var showHeaderBreakpoint = -60;
+    var scrollTop;
+    var isHome;
+
+    if ($('.main').is('#home')) {
+      isHome = true;
+      showHeaderBreakpoint = windowHeight+60;
+      $header.css({opacity: '1'});
+    } else {
+      isHome = false;
+      $header.addClass('main-header-layout--min main-header-layout--min-showed');
+      $header.css({opacity: '1'});
+    }
 
     $window.scroll(function () {
-      if ($(this).scrollTop() > windowHeight) {
-        $header.addClass('main-header-layout--min');
-      } else {
-        $header.removeClass('main-header-layout--min');
+      scrollTop = $(this).scrollTop();
+
+      if(isHome) {
+        if (scrollTop > windowHeight) {
+          $header.addClass('main-header-layout--min');
+        } else {
+          $header.removeClass('main-header-layout--min');
+        }
       }
 
-      st = $(this).scrollTop();
-      if (st < lastScrollTop) {
+      if (scrollTop < lastScrollTop && scrollTop > showHeaderBreakpoint) {
         $header.addClass('main-header-layout--min-showed');
       } else {
         $header.removeClass('main-header-layout--min-showed');
       }
-      lastScrollTop = st;
+      lastScrollTop = scrollTop;
     });
   });

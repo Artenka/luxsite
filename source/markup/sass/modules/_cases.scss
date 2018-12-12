@@ -1,0 +1,23 @@
+#cases {
+
+ .home-portfolio, .home-clients, .home-reviews {
+
+  .caption {
+   display: none;
+  }
+ }
+
+ .home-portfolio {
+
+  .main-content {
+   padding-top: 200px;
+   @include mobile {
+    padding-top: 110px;
+   }
+  }
+
+  .home-portfolio__more {
+   display: none;
+  }
+ }
+}

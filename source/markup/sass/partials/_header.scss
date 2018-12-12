@@ -4,7 +4,10 @@
  bottom: 0;
  left: 0;
  z-index: 99;
+ transition: 0.7s;
+ opacity: 0;
  @include tablet-mobile {
+  height: 60px;
   background: #fff;
   position: fixed;
   bottom: auto;
@@ -40,6 +43,7 @@
  &.main-header-layout--active, &.main-header-layout--active.main-header-layout--min {
   height: 100vh;
   background: #fff;
+  transition: none;
 
   .main-header-row-2, .main-header-row-3 {
    display: block;
@@ -62,10 +66,13 @@
  }
 
  &.main-header-layout--min {
+  height: 60px;
   position: fixed;
   top: -60px;
   right: 0;
-  transition: 0.7s;
+  @include tablet-mobile {
+   top: 0;
+  }
 
   @include desktop {
 
@@ -124,11 +131,9 @@
    }
 
    .main-header-menu-2-submenu {
-    display: none;
     border-top: 1px solid #fff;
     padding: 15px 20px 30px;
     position: static;
-    opacity: 1;
    }
 
    .header-burger {
