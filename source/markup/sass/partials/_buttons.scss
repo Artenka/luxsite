@@ -48,9 +48,10 @@
  }
 
  &.btn--orange {
-  background: linear-gradient(63deg, #ef7c21 0%, #fbb144 100%);
+  background-image: linear-gradient(to right, #f6981c 0%, #fbb730 51%, #f6981c 100%);
+  background-size: 200% auto;
   &:hover {
-   background: linear-gradient(63deg, #ef7c21 0%, #fbb144 100%);
+   background-position: right center;
   }
  }
 }

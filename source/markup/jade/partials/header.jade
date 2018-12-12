@@ -43,15 +43,41 @@ header.main-header-layout.section
         .header-burger__item
 
 script.
-  $(function(){
-    $('.header-burger').click(function(){
+  $(function () {
+    // header burger script
+    $('.header-burger').click(function () {
       $(this).toggleClass('header-burger--active');
       $(this).closest('.main-header-layout').toggleClass('main-header-layout--active');
+      $('body').toggleClass('no-scroll');
     });
 
+    // header submenu open on tablet/mobile
     if ($(window).width() < 1240) {
-      $('.main-header-menu-2__item-link').click(function(){
+      $('.main-header-menu-2__item-link').click(function () {
         $(this).next('.main-header-menu-2-submenu').slideToggle(300);
       });
     }
+
+    // header onscroll animation
+    var $window = $(window);
+    var windowHeight = $(window).height();
+    var $header = $('.main-header-layout');
+    var lastScrollTop = 0;
+    var st;
+
+    $window.scroll(function () {
+      if ($(this).scrollTop() > windowHeight) {
+        $header.addClass('main-header-layout--min');
+      } else {
+        $header.removeClass('main-header-layout--min');
+      }
+
+      st = $(this).scrollTop();
+      if (st < lastScrollTop) {
+        $header.addClass('main-header-layout--min-showed');
+      } else {
+        $header.removeClass('main-header-layout--min-showed');
+      }
+      lastScrollTop = st;
+    });
   });

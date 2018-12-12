@@ -26,6 +26,12 @@
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$from-color', EndColorStr='$to-color')";
 }
 
+@mixin desktop {
+	@media (min-width: #{$md}) {
+		@content;
+	}
+}
+
 @mixin laptop {
 	@media (max-width: #{$lg}) and (min-width: #{$md}) {
 		@content;

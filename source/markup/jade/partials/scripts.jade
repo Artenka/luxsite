@@ -100,10 +100,12 @@ script.
 
   function showPopup(popupId) {
     $(popupId).fadeIn(400);
+    $('body').addClass('no-scroll');
   }
   function hidePopup() {
     $('.popup-layout').fadeOut(400);
     $('.popup-video').find('iframe').remove();
+    $('body').removeClass('no-scroll');
   }
 
   function showVideoPopup(videoId) {

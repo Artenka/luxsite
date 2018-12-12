@@ -267,6 +267,7 @@ button {
  background: none;
  border: none;
  transition: 0.5s;
+ outline: none;
 }
 
 em {
@@ -365,4 +366,8 @@ input:-webkit-autofill {
    text-transform: none;
   }
  }
+}
+
+.no-scroll {
+ overflow: hidden;
 }
