@@ -5,12 +5,17 @@
  flex-direction: column;
  align-items: center;
  justify-content: center;
- position: fixed;
- top: 0;
+ position: absolute;
+ top: 100vh;
  left: 60px;
  z-index: 9;
  @include tablet-mobile {
   display: none;
+ }
+
+ &.fixed-aside--scroll {
+  position: fixed;
+  top: 0;
  }
 }
 

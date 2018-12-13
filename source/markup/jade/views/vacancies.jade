@@ -1,0 +1,30 @@
+extends ../layouts/main
+
+block contents
+
+  include ../partials/header
+
+  .main.main--standard#vacancies
+    section.section.vacancies
+      .main-content
+        h1.vacancies__title.title Работа у нас
+        ul.vacancies-list
+          li.vacancies-item
+            .vacancies-item__title Project manager
+            .vacancies-item__text Ищем человека который зарешает любой вопрос с любым клиентом
+            a(href="#").vacancies-item__link.link-arrow Узнать детали
+          li.vacancies-item
+            .vacancies-item__title UI/UX Designer
+            .vacancies-item__text Умеешь делать красоту которая вызывает не поддельный инетерес пользователя? Умеешь делать красоту которая вызывает не поддельный инетерес пользователя?
+            a(href="#").vacancies-item__link.link-arrow Узнать детали
+          li.vacancies-item
+            .vacancies-item__title Project manager
+            .vacancies-item__text Ищем человека который зарешает любой вопрос с любым клиентом
+            a(href="#").vacancies-item__link.link-arrow Узнать детали
+
+    include ../pages-partials/home/contacts
+    include ../pages-partials/home/action
+
+  include ../partials/footer
+  include ../partials/popups/popup-brief
+  include ../partials/popups/popup-audit

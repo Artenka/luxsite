@@ -26,6 +26,13 @@ body {
 
 .main {
  //overflow-x: hidden;
+
+ &.main--standard {
+  padding-top: 200px;
+  @include mobile {
+   padding-top: 100px;
+  }
+ }
 }
 
 .main-content {

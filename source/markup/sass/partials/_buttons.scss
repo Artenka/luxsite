@@ -48,10 +48,26 @@
  }
 
  &.btn--orange {
-  background-image: linear-gradient(to right, #f6981c 0%, #fbb730 51%, #f6981c 100%);
+  background: linear-gradient(to right, #f6981c 0%, #fbb730 51%, #f6981c 100%);
   background-size: 200% auto;
   &:hover {
    background-position: right center;
   }
+ }
+}
+
+.link-arrow {
+ display: inline-block;
+ background: url(../img/common/arrow-right-blue.png) no-repeat center right 2px;
+ color: #4069be;
+ font-size: 10px;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 1.2px;
+ padding-right: 70px;
+ transition: 0.5s;
+ cursor: pointer;
+ &:hover {
+  background-position: center right;
  }
 }

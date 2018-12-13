@@ -83,8 +83,10 @@ script.
       if(isHome) {
         if (scrollTop > windowHeight) {
           $header.addClass('main-header-layout--min');
+          $('.fixed-aside').addClass('fixed-aside--scroll');
         } else {
           $header.removeClass('main-header-layout--min');
+          $('.fixed-aside').removeClass('fixed-aside--scroll');
         }
       }
 
