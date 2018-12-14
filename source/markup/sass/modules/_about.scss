@@ -1,0 +1,59 @@
+#about {
+
+ .home-intro {
+  min-height: 520px;
+  padding: 85px 270px 40px;
+  @include tablet {
+   min-height: 740px;
+   padding: 80px 100px;
+  }
+  @include mobile {
+   padding: 180px 0 130px;
+  }
+  &:before {
+   display: none;
+  }
+ }
+
+ .home-team {
+
+  .caption {
+   display: none;
+  }
+
+  .home-team__more {
+   display: none;
+  }
+ }
+
+ .home-reviews {
+
+  .caption {
+   display: none;
+  }
+ }
+}
+
+.about-description {
+
+ .main-content {
+  padding: 110px 344px 75px 84px;
+  @include tablet {
+   padding: 65px 225px 85px 70px;
+  }
+  @include mobile {
+   padding: 110px 15px 100px;
+  }
+ }
+
+ .about-description__text {
+  color: #2f261d;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-top: 65px;
+  @include mobile {
+   margin-top: 60px;
+  }
+ }
+}

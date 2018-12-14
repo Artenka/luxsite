@@ -60,33 +60,55 @@ script.
 
     // header onscroll animation
     var $window = $(window);
-    var windowHeight = $(window).height();
     var $header = $('.main-header-layout');
+    var $fixedAside = $('.fixed-aside');
+    var $main = $('.main');
+    var windowHeight = $window.height();
     var lastScrollTop = 0;
     var showHeaderBreakpoint = -60;
     var scrollTop;
-    var isHome;
+    var currentPage = '';
 
-    if ($('.main').is('#home')) {
-      isHome = true;
-      showHeaderBreakpoint = windowHeight+60;
-      $header.css({opacity: '1'});
+    if ($main.is('#home') || $main.is('#about')) {
+      $fixedAside.css({top: $('.home-intro').height()}).removeClass('fixed-aside--scroll');
     } else {
-      isHome = false;
-      $header.addClass('main-header-layout--min main-header-layout--min-showed');
-      $header.css({opacity: '1'});
+
     }
+
+    if ($main.is('#home')) {
+      currentPage = 'home';
+      showHeaderBreakpoint = windowHeight+60;
+    } else if($main.is('#about')) {
+      currentPage = 'about';
+    } else {
+
+    }
+
+    if ($main.is('#home')) {
+
+    } else {
+      $header.addClass('main-header-layout--min main-header-layout--min-showed');
+    }
+
+    $header.css({opacity: '1'});
 
     $window.scroll(function () {
       scrollTop = $(this).scrollTop();
 
-      if(isHome) {
+      if(currentPage === 'home') {
         if (scrollTop > windowHeight) {
           $header.addClass('main-header-layout--min');
-          $('.fixed-aside').addClass('fixed-aside--scroll');
         } else {
           $header.removeClass('main-header-layout--min');
-          $('.fixed-aside').removeClass('fixed-aside--scroll');
+        }
+      }
+
+      // fixed menu positioning
+      if(currentPage === 'home' || currentPage === 'about') {
+        if (scrollTop > $('.home-intro').height()) {
+          $('.fixed-aside').css({top: 0}).addClass('fixed-aside--scroll');
+        } else {
+          $('.fixed-aside').css({top: $('.home-intro').height()}).removeClass('fixed-aside--scroll');
         }
       }
 

@@ -1,0 +1,35 @@
+extends ../layouts/main
+
+block contents
+
+  include ../partials/header
+
+  .main#about
+    section.banner.home-intro
+      .home-intro__video
+        video#video(loop autoplay="true" muted="muted")
+          source(src='videos/home-intro-video.mp4', type='video/mp4')
+
+      h1.title-big.home-intro__title Lux Site
+      p.home-intro__text Сайт лучшего жилого комплекса в пригороде Киева
+      button(type="button").home-intro__video-btn Мы за работой
+
+    section.section.about-description
+      .main-content
+        h2.title.about-description__title Нас объединяет желание делать<br class="br-lg"> только лучшее
+        p.about-description__text
+          | Основные принципы деятельности команды LuxSite – это профессионализм, ориентированность на интересы клиента, большой опыт сотрудников и компетентность, комплексный подход к решению каждой задачи, применение инновационных технологий, честность, ответственность и открытость. Следование этим принципам делает компанию LuxSite успешной.
+          br
+          br
+          | Мы готовы помочь каждому, кто имеет желание создать свой полноценный, качественный сайт, который станет залогом успешной работы и процветания. Мы создаем быстрые, надежные, информативные интернет-ресурсы с приятным интерфейсом. Команда LuxSite любит свою работу и это является залогом успеха!
+
+    include ../pages-partials/home/team
+    include ../pages-partials/home/work
+    include ../pages-partials/home/reviews
+    include ../pages-partials/home/action
+    include ../pages-partials/home/contacts
+
+
+  include ../partials/footer
+  include ../partials/popups/popup-brief
+  include ../partials/popups/popup-audit

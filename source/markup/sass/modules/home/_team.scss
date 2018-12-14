@@ -11,6 +11,21 @@
   }
  }
 
+ .home-team__text {
+  width: 700px;
+  color: #4069be;
+  font-family: FuturaPTBook, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 40px;
+  @include tablet {
+   width: 535px;
+  }
+  @include mobile {
+   width: 100%;
+  }
+ }
+
  .home-team__more {
   margin-top: 65px;
   @include mobile {

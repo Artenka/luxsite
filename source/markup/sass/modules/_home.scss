@@ -10,3 +10,13 @@
 @import "home/blog";
 @import "home/contacts";
 @import "home/action";
+
+#home {
+
+ .home-team {
+
+  .home-team__text {
+   display: none;
+  }
+ }
+}
