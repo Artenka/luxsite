@@ -1,0 +1,69 @@
+#contacts-page {
+
+}
+
+.contacts-about {
+
+ .main-content {
+  padding: 0 84px 50px;
+  @include tablet {
+   padding: 0 70px 50px;
+  }
+  @include mobile {
+   padding: 0 15px 50px;
+  }
+ }
+
+ .contacts-about__title {
+
+ }
+}
+
+.contacts-about-list {
+ width: 640px;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: flex-start;
+ margin-top: 60px;
+ @include mobile {
+  flex-direction: column;
+  margin-top: 70px;
+ }
+}
+
+.contacts-about-item {
+ width: 300px;
+ margin: 0 20px 55px 0;
+ @include mobile {
+  margin: 0 0 50px;
+ }
+
+ .contacts-about-item__title {
+  color: rgba(47, 38, 29, 0.5);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.32px;
+ }
+
+ .contacts-about-item__text {
+  display: block;
+  color: #2f261d;
+  font-family: FuturaPTBook, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 30px;
+
+  &.contacts-about-item__text--1, &.contacts-about-item__text--2 {
+   font-size: 24px;
+   font-weight: 600;
+   letter-spacing: -0.48px;
+  }
+  &.contacts-about-item__text--1 {
+   color: #3f68b9;
+  }
+  &.contacts-about-item__text--2 {
+   color: #fbb144;
+  }
+ }
+}

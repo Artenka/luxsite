@@ -1,4 +1,8 @@
 .home-contacts {
+ min-height: 440px;
+ @include mobile {
+  min-height: 560px;
+ }
 
  .main-content {
   background: #fafafa;
