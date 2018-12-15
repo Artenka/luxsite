@@ -54,6 +54,13 @@
    background-position: right center;
   }
  }
+ &.btn--blue-gradient {
+  background: linear-gradient(63deg, #4069be 0%, #498bfc 50%);
+  background-size: 200% auto;
+  &:hover {
+   background-position: right center;
+  }
+ }
 }
 
 .link-arrow {

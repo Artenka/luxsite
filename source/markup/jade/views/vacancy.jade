@@ -1,0 +1,95 @@
+extends ../layouts/main
+
+block contents
+
+  include ../partials/header
+
+  .main.main--standard#vacancy
+    section.section.vacancy
+      .main-content
+        h1.vacancy__title.title Менеджер по продажам
+        h3.vacancy__subtitle В связи с развитием направлений (социальные сети, контекстная реклама и продвижение, разработка сайтов) нам требуется менеджер по активным продажам.
+
+        ul.vacancy-about
+          li.vacancy-about__item
+            h2 Задачи:
+            p
+              | Привлечение и сопровождение клиентов;
+              br
+              | Подготовка коммерческих предложений;
+              br
+              | Поиск клиентов;
+              br
+              | Обработка входящих заявок;
+              br
+              | Проведение личных встреч;
+              br
+              | Увеличение прибыли компании
+          li.vacancy-about__item
+            h2 Тербования к кандидату:
+            p
+              | Возраст — от 21 до 28 лет;
+              br
+              | Опыт работы в продажах — от 2-ух лет;
+              br
+              | Желательно знание английского языка — средний уровень;
+              br
+              | Презентабельная внешность;
+              br
+              | Грамотная речь;
+              br
+              | Высокий уровень коммуникабельности;
+              br
+              | Знание техник холодных звонков
+          li.vacancy-about__item
+            h2 Задачи:
+            p
+              | 60% — офис и 40% проведение встреч
+              br
+              | Заработная плата — Ставка +
+              br
+              | Детали мотивации на собеседовании.
+
+    section.section.vacancy-form
+      .main-content
+        .formblock
+          h2.formblock__title Контактные данные
+          .formgroup.formgroup--2
+            .forminput
+              label.forminput__label Ваше имя
+              input.forminput__input(type="text")
+            .forminput
+              label.forminput__label Фамилия
+              input.forminput__input(type="text")
+            .forminput
+              label.forminput__label E-mail
+              input.forminput__input(type="text")
+            .forminput
+              label.forminput__label Номер телефона
+              input.forminput__input(type="text")
+          .formgroup
+            .forminput
+              label.forminput__label Ссылка на резюме
+              textarea.forminput__input
+
+          button(type="submit").btn.btn--blue-gradient.form-submit Отправить заявку
+
+    section.section.vacancies
+      .main-content
+        h1.vacancies__title.title Другие вакансии
+        ul.vacancies-list
+          li.vacancies-item
+            .vacancies-item__title Project manager
+            .vacancies-item__text Ищем человека который зарешает любой вопрос с любым клиентом
+            a(href="#").vacancies-item__link.link-arrow Узнать детали
+          li.vacancies-item
+            .vacancies-item__title UI/UX Designer
+            .vacancies-item__text Умеешь делать красоту которая вызывает не поддельный инетерес пользователя? Умеешь делать красоту которая вызывает не поддельный инетерес пользователя?
+            a(href="#").vacancies-item__link.link-arrow Узнать детали
+
+    include ../pages-partials/home/contacts
+    include ../pages-partials/home/action
+
+  include ../partials/footer
+  include ../partials/popups/popup-brief
+  include ../partials/popups/popup-audit

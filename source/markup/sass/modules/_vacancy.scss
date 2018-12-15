@@ -1,0 +1,85 @@
+#vacancy {
+
+ .vacancies {
+  padding-top: 110px;
+ }
+}
+
+.vacancy {
+
+ .main-content {
+  padding: 0 455px 70px 84px;
+  @include tablet {
+   padding: 0 calc(100% - 585px - 70px) 70px 70px;
+  }
+  @include mobile {
+   padding: 0 15px 65px;
+  }
+ }
+
+ .vacancy__title {
+
+ }
+
+ .vacancy__subtitle {
+  color: #4069be;
+  font-family: FuturaPTBook, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 40px;
+ }
+}
+
+.vacancy-about {
+ margin-top: 105px;
+ @include tablet {
+  margin-top: 85px;
+ }
+ @include mobile {
+  margin-top: 80px;
+ }
+
+ .vacancy-about__item {
+  margin-bottom: 65px;
+  &:last-child {
+   margin-bottom: 0;
+  }
+
+  h2 {
+   color: #2f261d;
+   font-size: 24px;
+   font-weight: 600;
+   line-height: 28px;
+   letter-spacing: -0.48px;
+   margin-bottom: 35px;
+  }
+  p {
+   color: #2f261d;
+   font-size: 18px;
+   font-weight: 300;
+   line-height: 20px;
+  }
+ }
+}
+
+.vacancy-form {
+
+ .main-content {
+  background-color: #f0f2ff;
+  padding: 100px 84px;
+  @include tablet {
+   padding: 100px 70px;
+  }
+  @include mobile {
+   padding: 100px 15px;
+  }
+ }
+
+ .formblock {
+  width: 560px;
+  margin: 0;
+  @include mobile {
+   width: 100%;
+  }
+ }
+}
