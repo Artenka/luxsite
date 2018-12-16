@@ -1,0 +1,130 @@
+#blog-single {
+
+ .home-intro {
+  min-height: 520px;
+  justify-content: flex-end;
+  padding: 140px 270px 40px;
+  @include tablet {
+   padding: 140px 100px 40px;
+  }
+  @include mobile {
+   padding: 140px 0 40px;
+  }
+  &:before {
+   display: none;
+  }
+ }
+}
+
+
+.single-section {
+
+ .main-content {
+  padding: 110px calc(100% - 924px) 0 84px;
+  @include tablet {
+   padding: 110px calc(100% - 910px) 0 70px;
+  }
+  @include mobile {
+   padding: 110px 15px 0;
+  }
+ }
+}
+
+.single-content {
+
+ .single-content__intro {
+  color: #104982;
+  margin-bottom: 100px;
+ }
+
+ &, & p, & li {
+  color: #2f261d;
+  font-family: FuturaPTBook, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+ }
+
+ p, h1, h2, h3, h4, h5, h6, ul, ol, li {
+  display: block;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+  font-family: FuturaPT, sans-serif;
+  font-weight: 600;
+  margin: 40px 0;
+ }
+
+ p, ul, ol {
+  margin: 25px 0;
+ }
+
+ h1 {
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.44px;
+ }
+ h2 {
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.44px;
+ }
+ h3 {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.44px;
+ }
+ h4 {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.44px;
+ }
+ h5 {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.44px;
+ }
+ h6 {
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: -0.44px;
+ }
+
+ li {
+  padding-left: 30px;
+  margin-bottom: 12px;
+  &:last-child {
+   margin-bottom: 0;
+  }
+ }
+
+ ol {
+
+  li {
+   list-style-type: disc;
+  }
+ }
+
+ ul {
+
+  li {
+   position: relative;
+   &:before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #4069be;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+   }
+  }
+ }
+
+ img, iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 40px 0;
+ }
+}
