@@ -69,22 +69,24 @@ script.
     var scrollTop;
     var currentPage = '';
 
-    if ($main.is('#home') || $main.is('#about')) {
+    if ($main.is('#home')) {
+      currentPage = 'home';
+      showHeaderBreakpoint = windowHeight + 60;
+    } else if ($main.is('#about-page')) {
+      currentPage = 'about';
+    } else if ($main.is('#blog-page')) {
+      currentPage = 'blog';
+    } else {
+
+    }
+
+    if (currentPage === 'home' || currentPage === 'about' || currentPage === 'blog') {
       $fixedAside.css({top: $('.home-intro').height()}).removeClass('fixed-aside--scroll');
     } else {
 
     }
 
-    if ($main.is('#home')) {
-      currentPage = 'home';
-      showHeaderBreakpoint = windowHeight+60;
-    } else if($main.is('#about')) {
-      currentPage = 'about';
-    } else {
-
-    }
-
-    if ($main.is('#home')) {
+    if(currentPage === 'home') {
 
     } else {
       $header.addClass('main-header-layout--min main-header-layout--min-showed');
@@ -104,7 +106,7 @@ script.
       }
 
       // fixed menu positioning
-      if(currentPage === 'home' || currentPage === 'about') {
+      if(currentPage === 'home' || currentPage === 'about' || currentPage === 'blog') {
         if (scrollTop > $('.home-intro').height()) {
           $('.fixed-aside').css({top: 0}).addClass('fixed-aside--scroll');
         } else {

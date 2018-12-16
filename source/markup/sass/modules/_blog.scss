@@ -1,0 +1,172 @@
+#blog-page {
+
+ .home-intro {
+  min-height: 520px;
+  padding: 160px 270px 45px;
+  @include tablet {
+   padding: 160px 100px 45px;
+  }
+  @include mobile {
+   padding: 160px 0 45px;
+  }
+  &:before {
+   display: none;
+  }
+ }
+}
+
+.blog-banner-info {
+ width: 510px;
+ @include mobile {
+  width: 290px;
+ }
+
+ .blog-banner-info__date {
+  color: rgba(47, 38, 29, 0.5);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.32px;
+ }
+
+ .blog-banner-info__title {
+  margin-top: 25px;
+ }
+ .blog-banner-info__subtitle {
+  color: #104982;
+  font-family: FuturaPTBook, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 20px;
+ }
+
+ .blog-banner-info__more {
+  margin-top: 40px;
+ }
+}
+
+
+.blog-section {
+
+ .main-content {
+  padding: 60px 50px 110px;
+  @include mobile {
+   padding: 60px 15px 110px;
+  }
+ }
+}
+
+.blog-nav {
+ display: flex;
+ //flex-wrap: wrap;
+ overflow-x: auto;
+
+ .blog-nav__item {
+  margin: 0 10px 5px 0;
+
+  &.blog-nav__item--active {
+
+  }
+ }
+}
+
+
+.blog-list {
+ display: inline-grid;
+ grid-template-columns: repeat(3,310px);
+ grid-auto-rows: 330px;
+ grid-auto-flow: row dense;
+ grid-gap: 0;
+ border-top: 1px solid rgba(0,0,0,0.1);
+ border-left: 1px solid rgba(0,0,0,0.1);
+ margin-top: 40px;
+ @include tablet {
+  grid-template-columns: repeat(2,310px);
+ }
+ @include mobile {
+  grid-template-columns: repeat(1,290px);
+  border-left: 0;
+ }
+}
+
+.blog-item.home-blog-item {
+ width: auto;
+ height: auto;
+ border-right: 1px solid rgba(0,0,0,0.1);
+ border-bottom: 1px solid rgba(0,0,0,0.1);
+ @include mobile {
+  border-right: 0;
+ }
+
+ &.blog-item--2_1 {
+  grid-column: span 2;
+  @include mobile {
+   grid-column: span 1;
+  }
+ }
+}
+
+
+.blog-footer {
+ display: flex;
+ align-items: center;
+ margin-top: 70px;
+ @include mobile {
+  flex-direction: column;
+ }
+}
+
+.blog-more {
+ @include mobile {
+  order: 2;
+ }
+}
+
+.blog-pagination {
+ display: flex;
+ align-items: center;
+ margin-left: 90px;
+ @include mobile {
+  order: 1;
+  margin: 0 0 60px;
+ }
+
+ a, p {
+  display: block;
+  color: #2f261d;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.32px;
+  padding: 0 3px 8px;
+  margin-right: 10px;
+ }
+ a:hover {
+  color: #4069be;
+ }
+
+ .blog-pagination__item {
+  position: relative;
+  &:before {
+   content: '';
+   width: 100%;
+   height: 1px;
+   background: #4069be;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   opacity: 0;
+  }
+
+  &.blog-pagination__item--active {
+   color: #4069be;
+   &:before {
+    opacity: 1;
+   }
+  }
+ }
+
+ .blog-pagination__dots {
+
+ }
+}

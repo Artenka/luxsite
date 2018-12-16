@@ -1,0 +1,67 @@
+extends ../layouts/main
+
+block contents
+
+  include ../partials/header
+
+  .main#blog-page
+    section.banner.home-intro(style="background-image: url(img/blog/banner-bg.jpg)")
+      .blog-banner-info
+        h3.blog-banner-info__date 18.11.2018
+        h1.blog-banner-info__title.title Google my business что это?
+        h2.blog-banner-info__subtitle Google my business что это? Платформа Google my business создана для продвижения и поиска сайтов, привлечения трафика ...
+        a(href="#").btn.btn--blue-gradient.blog-banner-info__more Читать полностью
+
+    section.section.blog-section
+      .main-content
+        .blog-nav.hidden-scroll
+          .blog-nav__item.blue-box #Разработка
+          .blog-nav__item.blue-box #продвижение
+          .blog-nav__item.blue-box #Аналитика
+          .blog-nav__item.blue-box #smm
+          .blog-nav__item.blue-box #реклама
+          .blog-nav__item.blue-box #дизайн
+
+        .blog-list
+          a(href="#").home-blog-item.blog-item.blog-item--2_1
+            h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
+            h3.home-blog-item__date 08.11.2018
+          a(href="#").home-blog-item.blog-item
+            h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
+            h3.home-blog-item__date 08.11.2018
+          a(href="#").home-blog-item.blog-item
+            h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
+            h3.home-blog-item__date 08.11.2018
+          a(href="#").home-blog-item.blog-item
+            h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
+            h3.home-blog-item__date 08.11.2018
+          a(href="#").home-blog-item.blog-item
+            h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
+            h3.home-blog-item__date 08.11.2018
+
+        .blog-footer
+          button.btn.btn--blue-gradient.blog-more показать еще
+          .blog-pagination
+            a(href="#").blog-pagination__item.blog-pagination__item--active 1
+            a(href="#").blog-pagination__item 2
+            a(href="#").blog-pagination__item 3
+            p.blog-pagination__dots ...
+            a(href="#").blog-pagination__item 54
+
+
+
+    include ../pages-partials/home/contacts
+    include ../pages-partials/home/action
+
+
+  include ../partials/footer
+  include ../partials/popups/popup-brief
+  include ../partials/popups/popup-audit
+
+
+  script.
+    $(function(){
+      $('.blog-nav__item').click(function(){
+        $(this).toggleClass('blue-box--active');
+      });
+    });

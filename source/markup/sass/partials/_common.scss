@@ -18,13 +18,12 @@
 
 .title {
  color: #4069be;
- font-size: 42px;
+ font-size: 40px;
  font-weight: 600;
  line-height: 44px;
- letter-spacing: -0.63px;
+ letter-spacing: -1.26px;
  @include tablet {
   font-size: 38px;
-  letter-spacing: -1.26px;
  }
  @include mobile {
   font-size: 28px;
@@ -183,4 +182,22 @@
 
 .form-submit {
  margin-top: 50px;
+}
+
+.blue-box {
+ border-radius: 4px;
+ border: 1px solid #498bfc;
+ color: #4069be;
+ font-size: 10px;
+ font-weight: 600;
+ text-transform: uppercase;
+ padding: 7px 20px;
+ transition: 0.5s;
+ position: relative;
+ z-index: 2;
+ cursor: pointer;
+}
+.blue-box--active {
+ background: #498bfc;
+ color: #fff;
 }
