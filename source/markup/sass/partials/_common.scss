@@ -41,7 +41,7 @@
  background-color: #ffc744;
  color: #2f261d;
  font-size: 10px;
- font-weight: 600;
+ font-weight: 500;
  text-transform: uppercase;
  letter-spacing: 1.2px;
  padding: 2px 6px;
@@ -52,7 +52,7 @@
  display: block;
  width: 102px;
  height: 21px;
- background: url(../img/logo.png) no-repeat center / contain;
+ background: url(../img/logo.svg) no-repeat center / contain;
  @include tablet-mobile {
   width: 87px;
   height: 18px;
@@ -74,7 +74,7 @@
 .item-arrow {
  width: 16px;
  height: 16px;
- background: url(../img/common/item-arrow.png) no-repeat top right;
+ background: url(../img/common/item-arrow.svg) no-repeat top right;
  position: absolute;
  top: 30px;
  right: 30px;
@@ -83,7 +83,7 @@
 .item-arrow-hover {
  width: 16px;
  height: 16px;
- background: url(../img/common/item-arrow-hover.png) no-repeat top right;
+ background: url(../img/common/item-arrow-hover.svg) no-repeat top right;
  position: absolute;
  top: 30px;
  right: 30px;
@@ -166,6 +166,7 @@
   position: absolute;
   top: 14px;
   left: 0;
+  transform-origin: 0 0;
  }
 
  .forminput__input {
@@ -196,8 +197,60 @@
  position: relative;
  z-index: 2;
  cursor: pointer;
+ &:hover {
+  @extend .blue-box--active;
+ }
 }
 .blue-box--active {
  background: #498bfc;
  color: #fff;
+}
+
+.blue-section {
+
+ .main-content {
+  background: #f0f2ff;
+  padding: 95px 83px;
+ }
+
+ .blue-section__content {
+  width: 635px;
+ }
+
+ p, li {
+  color: #104982;
+  font-family: FuturaPTBook, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+ }
+
+ p, ul {
+  margin-top: 35px;
+ }
+
+ h2 {
+  color: #4069be;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -0.63px;
+ }
+
+ li {
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 13px;
+  &:last-child {
+   margin-bottom: 0;
+  }
+  &:before {
+   content: '';
+   width: 4px;
+   height: 4px;
+   border-radius: 50%;
+   background-color: #4069be;
+   position: absolute;
+   top: 9px;
+   left: 0;
+  }
+ }
 }

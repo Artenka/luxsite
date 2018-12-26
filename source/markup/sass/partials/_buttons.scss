@@ -8,12 +8,12 @@
  text-transform: uppercase;
  text-align: center;
  letter-spacing: 1.32px;
- padding: 23px 56px;
+ padding: 17px 56px 18px;
  cursor: pointer;
- transition: 0.7s;
+ transition: 0.2s;
  @include tablet-mobile {
   font-size: 10px;
-  padding: 18px 50px;
+  padding: 17px 50px 18px;
  }
  &:hover {
   background: #498bfc;
@@ -42,8 +42,8 @@
   border: 1px solid #ffffff;
   background: transparent;
   &:hover {
-   background: #4069be;
-   border-color: #4069be;
+   background: #fff;
+   color: #4069be;
   }
  }
 
@@ -65,13 +65,13 @@
 
 .link-arrow {
  display: inline-block;
- background: url(../img/common/arrow-right-blue.png) no-repeat center right 2px;
+ background: url(../img/common/arrow-right-blue.png) no-repeat center right 22px;
  color: #4069be;
  font-size: 10px;
  font-weight: 600;
  text-transform: uppercase;
  letter-spacing: 1.2px;
- padding-right: 70px;
+ padding-right: 90px;
  transition: 0.5s;
  cursor: pointer;
  &:hover {

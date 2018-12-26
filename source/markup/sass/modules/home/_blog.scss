@@ -90,12 +90,12 @@
  &:before {
   @extend .item-arrow;
   content: '';
-  background-image: url(../img/common/item-arrow-gray.png);
+  background-image: url(../img/common/item-arrow-gray.svg);
  }
  &:after {
   @extend .item-arrow-hover;
   content: '';
-  background-image: url(../img/common/item-arrow-hover-blue.png);
+  background-image: url(../img/common/item-arrow-hover-blue.svg);
  }
  &:hover {
   box-shadow: 2px 3px 10px rgba(16, 73, 130, 0.2);

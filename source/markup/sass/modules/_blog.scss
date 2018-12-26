@@ -1,17 +1,18 @@
 #blog-page {
 
- .home-intro {
-  min-height: 520px;
-  padding: 160px 270px 45px;
-  @include tablet {
-   padding: 160px 100px 45px;
-  }
-  @include mobile {
-   padding: 160px 0 45px;
-  }
-  &:before {
-   display: none;
-  }
+}
+
+.blog-banner.home-intro {
+ min-height: 520px;
+ padding: 160px 270px 45px;
+ @include tablet {
+  padding: 160px 100px 45px;
+ }
+ @include mobile {
+  padding: 160px 0 45px;
+ }
+ &:before {
+  display: none;
  }
 }
 

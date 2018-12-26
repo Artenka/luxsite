@@ -1,0 +1,25 @@
+@import "case/info";
+@import "case/content";
+
+#case-page {
+
+}
+
+.case-banner {
+
+ .case-banner__title {
+  color: #ffffff;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 66px;
+  text-transform: uppercase;
+  letter-spacing: -0.96px;
+ }
+ .case-banner__text {
+  color: #ffffff;
+  font-family: FuturaPTBook, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 40px;
+ }
+}

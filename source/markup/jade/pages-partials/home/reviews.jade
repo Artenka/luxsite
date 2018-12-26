@@ -19,11 +19,14 @@ section.section.home-reviews
             h3.home-review__position ЛИНИЯ ОКОН
             p.home-review__text Искренние слова благодарности команде компании «LuxSite». Мы довольны совместной работе. Все наши пожелания и просьбы никогда не оставались без внимания. Ребята разработали нам качественный сайт, а сейчас продвигают его.
 
-    .slider-counter.home-reviews-slider-counter 1/1
+    .slider-counter.home-reviews-slider-counter <span class="home-reviews-slider-counter__current">1</span>/<span class="home-reviews-slider-counter__total">1</span>
 
 script.
   $(function () {
-    $('.home-reviews-slider').slick({
+    $homeReviewsSlider = $('.home-reviews-slider');
+    sliderCounter($homeReviewsSlider, $('.home-reviews-slider-counter__current'), $('.home-reviews-slider-counter__total'));
+
+    $homeReviewsSlider.slick({
       adaptiveHeight: true,
       infinite: true,
       slidesToShow: 1,

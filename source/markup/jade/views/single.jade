@@ -64,11 +64,14 @@ block contents
               h2.home-blog-item__title Что такое внешняя SEO оптимизация сайта и как она влияет на его продвижение?
               h3.home-blog-item__date 08.11.2018
 
-        .slider-counter.home-blog-slider-counter 1/1
+        .slider-counter.home-blog-slider-counter <span class="home-blog-slider-counter__current">1</span>/<span class="home-blog-slider-counter__total">1</span>
 
     script.
       $(function () {
-        $('.home-blog-slider').slick({
+        $homeBlogSlider = $('.home-blog-slider');
+        sliderCounter($homeBlogSlider, $('.home-blog-slider-counter__current'), $('.home-blog-slider-counter__total'));
+
+        $homeBlogSlider.slick({
           adaptiveHeight: true,
           infinite: true,
           slidesToShow: 4,

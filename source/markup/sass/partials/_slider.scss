@@ -5,15 +5,15 @@
   .slick-arrow {
 
    &.slick-prev {
-    background-image: url(../img/common/arrow-left-blue.png);
+    background-image: url(../img/common/arrow-left-blue.svg);
     &:hover {
-     background-image: url(../img/common/arrow-left-black.png);
+     background-image: url(../img/common/arrow-left-black.svg);
     }
    }
    &.slick-next {
-    background-image: url(../img/common/arrow-right-blue.png);
+    background-image: url(../img/common/arrow-right-blue.svg);
     &:hover {
-     background-image: url(../img/common/arrow-right-black.png);
+     background-image: url(../img/common/arrow-right-black.svg);
     }
    }
   }
@@ -35,15 +35,15 @@
  transition: 0.5s;
 
  &.slick-prev {
-  background-image: url(../img/common/arrow-left-white.png);
+  background-image: url(../img/common/arrow-left-white.svg);
   &:hover {
-   background-image: url(../img/common/arrow-left-black.png);
+   background-image: url(../img/common/arrow-left-black.svg);
   }
  }
  &.slick-next {
-  background-image: url(../img/common/arrow-right-white.png);
+  background-image: url(../img/common/arrow-right-white.svg);
   &:hover {
-   background-image: url(../img/common/arrow-right-black.png);
+   background-image: url(../img/common/arrow-right-black.svg);
   }
  }
 }

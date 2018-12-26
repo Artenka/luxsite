@@ -58,12 +58,15 @@ section.section.home-clients
             p.home-clients-slide__item-number 08
             .home-clients-slide__item-image(style="background-image: url(img/home/clients/client-1.png)")
 
-    .slider-counter.home-clients-slider-counter 1/1
+    .slider-counter.home-clients-slider-counter <span class="home-clients-slider-counter__current">1</span>/<span class="home-clients-slider-counter__total">1</span>
 
 
 script.
   $(function () {
-    $('.home-clients-slider').slick({
+    $homeClientsSlider = $('.home-clients-slider');
+    sliderCounter($homeClientsSlider, $('.home-clients-slider-counter__current'), $('.home-clients-slider-counter__total'));
+
+    $homeClientsSlider.slick({
       adaptiveHeight: true,
       infinite: true,
       slidesToShow: 1,

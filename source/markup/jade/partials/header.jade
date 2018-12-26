@@ -10,13 +10,31 @@ header.main-header-layout.section
         button(onclick="showPopup('#popup-brief')").popup-link.main-header-submit.btn ОСтавить заявку
 
       .main-header-row.main-header-row-2
-        .main-header-menu-1
-          a(href="#about").main-header-menu-1__item.link-smooth о компании
-          a(href="#services").main-header-menu-1__item.link-smooth услуги
-          a(href="#portfolio").main-header-menu-1__item.link-smooth портфолио
-          a(href="#blog").main-header-menu-1__item.link-smooth блог
-          a(href="#team").main-header-menu-1__item.link-smooth Вакансии
-          a(href="#contacts").main-header-menu-1__item.link-smooth контакты
+        ul.main-header-menu-1
+          li.main-header-menu-1__item
+            a(href="#about") о компании
+          li.main-header-menu-1__item.main-header-menu-1__item--submenu
+            a(href="#services") услуги
+            .main-header-menu-1__item-submenu
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+              a(href="#").main-header-menu-1__item-submenu-item Разработка сайта
+          li.main-header-menu-1__item
+            a(href="#portfolio") портфолио
+          li.main-header-menu-1__item
+            a(href="#blog") блог
+          li.main-header-menu-1__item
+            a(href="#team") Вакансии
+          li.main-header-menu-1__item
+            a(href="#contacts") контакты
         button(onclick="showPopup('#popup-brief')").popup-link.main-header-submit.btn ОСтавить заявку
 
       .main-header-row.main-header-row-3
@@ -71,19 +89,21 @@ script.
 
     if ($main.is('#home')) {
       currentPage = 'home';
-      showHeaderBreakpoint = windowHeight + 60;
+      showHeaderBreakpoint = windowHeight;
     } else if ($main.is('#about-page')) {
       currentPage = 'about';
     } else if ($main.is('#blog-page')) {
       currentPage = 'blog';
     } else if ($main.is('#blog-single')) {
       currentPage = 'blog-single';
+    }  else if ($main.is('#case-page')) {
+      currentPage = 'case';
     } else {
 
     }
 
-    if (currentPage === 'home' || currentPage === 'about' || currentPage === 'blog' || currentPage === 'blog-single') {
-      $fixedAside.css({top: $('.home-intro').height()}).removeClass('fixed-aside--scroll');
+    if (currentPage === 'home' || currentPage === 'about' || currentPage === 'blog' || currentPage === 'case' || currentPage === 'blog-single') {
+      $fixedAside.css({top: $('.home-intro').innerHeight()}).removeClass('fixed-aside--scroll');
     } else {
 
     }
@@ -108,11 +128,11 @@ script.
       }
 
       // fixed menu positioning
-      if(currentPage === 'home' || currentPage === 'about' || currentPage === 'blog' || currentPage === 'blog-single') {
-        if (scrollTop > $('.home-intro').height()) {
+      if(currentPage === 'home' || currentPage === 'about' || currentPage === 'blog' || currentPage === 'blog-single' || currentPage === 'case') {
+        if (scrollTop > $('.home-intro').innerHeight()) {
           $('.fixed-aside').css({top: 0}).addClass('fixed-aside--scroll');
         } else {
-          $('.fixed-aside').css({top: $('.home-intro').height()}).removeClass('fixed-aside--scroll');
+          $('.fixed-aside').css({top: $('.home-intro').innerHeight()}).removeClass('fixed-aside--scroll');
         }
       }
 

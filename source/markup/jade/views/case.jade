@@ -1,0 +1,46 @@
+extends ../layouts/main
+
+block contents
+
+  include ../partials/header
+
+  .main#case-page
+    section.banner.blog-banner.home-intro(style="background-image: url(img/case/case-banner.jpg)")
+      .case-banner
+        h1.case-banner__title CONTINENT
+        p.case-banner__text Сайт лучшего жилого комплекса в пригороде Киева
+
+    include ../pages-partials/case/info
+    include ../pages-partials/case/task
+
+    section.section.case-content
+      .main-content
+        h2 Иследование
+        p Мы провели аналитическую работу и выяснили, какая информация влияет на выбор квартиры премиум-класса: прежде всего, это престижность ЖК, элитное расположение, историческая значимость района и внешний вид комплекса.
+        img.main-content__img-min(src="img/case/case-img-4.jpg")
+        h2 Дизайн
+        p Мы расположили информацию о преимуществах и особенностях ЖК на главном экране, чтобы пользователи могли сразу получить все интересующие данные.
+        img.main-content__img-min(src="img/case/case-img-3.jpg")
+        p Мы расположили информацию о преимуществах и особенностях ЖК на главном экране, чтобы пользователи могли сразу получить все интересующие данные.
+        img(src="img/case/case-img-1.jpg")
+        h2 Доступность
+        p Сайт доступен на всех устройсвах которые только возможно<br> подключить к интернету
+        img(src="img/case/case-img-2.jpg")
+
+    include ../pages-partials/case/result
+    include ../pages-partials/home/action
+    include ../pages-partials/case/cases-more
+    include ../pages-partials/home/contacts
+
+
+  include ../partials/footer
+  include ../partials/popups/popup-brief
+  include ../partials/popups/popup-audit
+
+
+  script.
+    $(function(){
+      $('.blog-nav__item').click(function(){
+        $(this).toggleClass('blue-box--active');
+      });
+    });
