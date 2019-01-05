@@ -98,11 +98,13 @@ script.
       currentPage = 'blog-single';
     }  else if ($main.is('#case-page')) {
       currentPage = 'case';
+    }   else if ($main.is('#services-support')) {
+      currentPage = 'services-support';
     } else {
 
     }
 
-    if (currentPage === 'home' || currentPage === 'about' || currentPage === 'blog' || currentPage === 'case' || currentPage === 'blog-single') {
+    if (currentPage === 'home' || currentPage === 'about' || currentPage === 'blog' || currentPage === 'case' || currentPage === 'blog-single' || currentPage === 'services-support') {
       $fixedAside.css({top: $('.home-intro').innerHeight()}).removeClass('fixed-aside--scroll');
     } else {
 
@@ -128,7 +130,7 @@ script.
       }
 
       // fixed menu positioning
-      if(currentPage === 'home' || currentPage === 'about' || currentPage === 'blog' || currentPage === 'blog-single' || currentPage === 'case') {
+      if(currentPage === 'home' || currentPage === 'about' || currentPage === 'blog' || currentPage === 'blog-single' || currentPage === 'case' || currentPage === 'services-support') {
         if (scrollTop > $('.home-intro').innerHeight()) {
           $('.fixed-aside').css({top: 0}).addClass('fixed-aside--scroll');
         } else {

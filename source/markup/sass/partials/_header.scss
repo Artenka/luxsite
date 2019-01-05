@@ -72,7 +72,19 @@
   top: -60px;
   right: 0;
   @include tablet-mobile {
+   height: auto;
    top: 0;
+  }
+
+  .main-header-menu-1, .main-header-menu-1 > ul {
+
+   .main-header-menu-1__item, .page_item, > .menu-item {
+
+    .main-header-menu-1__item-submenu, .sub-menu {
+     bottom: auto;
+     top: 100%;
+    }
+   }
   }
 
   @include desktop {
@@ -350,6 +362,7 @@
    position: absolute;
    bottom: 100%;
    left: 0;
+   z-index: 10;
    transition: 0.5s;
 
    .main-header-menu-1__item-submenu-item, > .menu-item {

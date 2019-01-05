@@ -69,22 +69,22 @@
   letter-spacing: -0.44px;
  }
  h3 {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.44px;
+ }
+ h4 {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: -0.44px;
  }
- h4 {
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: -0.44px;
- }
  h5 {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.44px;
  }
  h6 {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 14px;
   letter-spacing: -0.44px;
  }
@@ -125,6 +125,6 @@
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 40px 0;
+  margin: 40px auto;
  }
 }
