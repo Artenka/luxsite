@@ -132,7 +132,7 @@
   margin-right: 0;
  }
 
- .main-footer-list__item {
+ .main-footer-list__item, a {
   display: block;
   color: rgba(47, 38, 29, 0.5);
   font-size: 16px;
@@ -156,9 +156,6 @@
    &:before {
     left: 0;
    }
-  }
-  &:last-child {
-   margin-bottom: 0;
   }
  }
 }

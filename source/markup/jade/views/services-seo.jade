@@ -4,7 +4,7 @@ block contents
 
   include ../partials/header
 
-  .main#services-support
+  .main#page
     section.banner.blog-banner.home-intro.services-intro(style="background-image: url(img/services/seo/services-seo-banner.jpg)")
       h1.banner-title.title SEO
 
@@ -307,11 +307,3 @@ block contents
   include ../partials/footer
   include ../partials/popups/popup-brief
   include ../partials/popups/popup-audit
-
-
-  script.
-    $(function(){
-      $('.services-faq-item__title, .services-faq-item__close').click(function(){
-        $(this).closest('.services-faq-item').find('.services-faq-item__text').slideToggle(300);
-      });
-    });

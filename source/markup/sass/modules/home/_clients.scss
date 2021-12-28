@@ -51,18 +51,18 @@
  }
 
  .slick-arrow {
-  bottom: -41px;
+  bottom: -50px;
 
   &.slick-prev {
-   left: 122px;
+   left: 95px;
    @include mobile {
-    left: 80px;
+    left: 53px;
    }
   }
   &.slick-next {
-   left: 321px;
+   left: 294px;
    @include mobile {
-    left: 222px;
+    left: 195px;
    }
   }
  }
@@ -136,9 +136,10 @@
   }
   .home-clients-slide__item-image {
    height: 92px;
-   background: no-repeat center left;
-   opacity: 0.5;
+   background: no-repeat center / auto 80%;
+   //opacity: 0.5;
    transition: 0.7s;
+   filter: grayscale(1);
   }
  }
 }

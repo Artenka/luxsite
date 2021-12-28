@@ -9,7 +9,7 @@
   padding: 160px 100px 45px;
  }
  @include mobile {
-  padding: 160px 0 45px;
+  padding: 160px 15px 45px;
  }
  &:before {
   display: none;
@@ -89,7 +89,7 @@
   grid-template-columns: repeat(2,310px);
  }
  @include mobile {
-  grid-template-columns: repeat(1,290px);
+  grid-template-columns: repeat(1,100%);
   border-left: 0;
  }
 }
@@ -115,6 +115,7 @@
 .blog-footer {
  display: flex;
  align-items: center;
+ justify-content: center;
  margin-top: 70px;
  @include mobile {
   flex-direction: column;
@@ -130,7 +131,7 @@
 .blog-pagination {
  display: flex;
  align-items: center;
- margin-left: 90px;
+ margin: 0 90px;
  @include mobile {
   order: 1;
   margin: 0 0 60px;

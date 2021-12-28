@@ -18,15 +18,31 @@
  }
 
  .vacancy__title {
-
+  margin-bottom: 40px;
  }
 
- .vacancy__subtitle {
+ .vacancy__subtitle, h3 {
   color: #4069be;
   font-family: FuturaPTBook, sans-serif;
   font-size: 18px;
   line-height: 20px;
-  margin-top: 40px;
+  margin: 30px 0;
+ }
+
+ h2 {
+  color: #2f261d;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.48px;
+  margin: 35px 0;
+ }
+ p {
+  color: #2f261d;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  margin: 20px 0;
  }
 }
 

@@ -203,6 +203,13 @@
   font-weight: 300;
   line-height: 20px;
   margin-top: 40px;
+
+  p {
+   color: #2f261d;
+   font-size: 18px;
+   font-weight: 300;
+   line-height: 20px;
+  }
  }
 
  .services-faq-item__close {
@@ -224,7 +231,7 @@
 }
 
 .services-packages-layout {
- margin: 60px 0 30px;
+ margin: 60px 0 110px;
  overflow-x: auto;
 }
 .services-packages {
@@ -419,5 +426,71 @@
     right: 0;
    }
   }
+ }
+}
+
+.services-web-list {
+ width: 810px;
+ display: flex;
+ flex-wrap: wrap;
+ @include tablet-mobile {
+  width: 100%;
+  flex-direction: column;
+ }
+}
+.services-web-item {
+ width: 350px;
+ border-bottom: 1px solid #4069be;
+ padding: 0 30px 55px 0;
+ margin: 0 110px 70px 0;
+ @include tablet {
+  margin: 0 0 70px 0;
+ }
+ @include mobile {
+  width: 100%;
+  padding: 0 0 40px;
+  margin: 0 0 50px;
+ }
+ &:nth-child(2n+2) {
+  margin-right: 0;
+ }
+
+ p {
+  color: #2f261d;
+ }
+}
+
+.services-web-adaptive {
+ padding-right: calc(100% - 500px);
+ position: relative;
+ @include tablet-mobile {
+  padding-right: 0;
+ }
+ &:after {
+  content: '';
+  width: 508px;
+  height: 843px;
+  background: url(../img/services/web/services-web-adaptive.png) no-repeat center / contain;
+  position: absolute;
+  top: -32px;
+  right: 0;
+  z-index: 10;
+  @include tablet-mobile {
+   display: none;
+  }
+ }
+
+ .main-content {
+  width: 100%;
+
+ >h1, > h2, > h3, > h4, > h5, > h5, > h6, > p, > ul, > ol {
+  padding-right: 0;
+  @include tablet {
+   padding-right: 70px;
+  }
+  @include mobile {
+   padding-right: 15px;
+  }
+ }
  }
 }

@@ -46,24 +46,24 @@
  }
 
  .slick-arrow {
-  bottom: -41px;
+  bottom: -50px;
 
   &.slick-prev {
-   left: 567px;
+   left: 540px;
    @include tablet {
-    left: 409px;
+    left: 382px;
    }
    @include mobile {
-    left: 80px;
+    left: 53px;
    }
   }
   &.slick-next {
-   left: 766px;
+   left: 739px;
    @include tablet {
-    left: 608px;
+    left: 581px;
    }
    @include mobile {
-    left: 222px;
+    left: 195px;
    }
   }
  }

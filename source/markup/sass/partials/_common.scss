@@ -276,7 +276,7 @@
 
 
 .page-content {
- padding: 40px 0 80px;
+ padding: 40px 0 0;
 
  .blue-section {
 
@@ -290,12 +290,19 @@
 
  .main-content {
 
-  > h2, > h3, > h4, > h5, > h5, > h6, > p, > ul, > ol {
-   max-width: 800px;
+  >h1, > h2, > h3, > h4, > h5, > h5, > h6, > p, > ul, > ol {
+   max-width: 1400px;
    color: #2f261d;
-   padding: 0 83px;
+   padding: 0 273px 0 83px;
+   @include tablet {
+    padding: 0 70px;
+   }
    @include mobile {
     padding: 0 15px;
+   }
+
+   &:last-child {
+    margin-bottom: 80px;
    }
   }
 
@@ -315,7 +322,6 @@
 
   > h1 {
    @extend .title-big;
-   max-width: 1000px;
    color: #4069be;
    padding: 0 83px;
    margin: 60px 0;
@@ -440,5 +446,118 @@
     }
    }
   }
+
+  img, iframe {
+   max-width: 100%;
+   height: auto;
+  }
+
+  table {
+   border-top: 1px solid rgba(0,0,0,0.1);
+
+   tr, th {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+   }
+
+   td {
+    color: rgba(0,0,0,0.5);
+    font-size: 18px;
+    line-height: 20px;
+    padding: 15px 25px 15px 0;
+
+    &:nth-child(1) {
+     padding-left: 83px;
+     @include mobile {
+      padding-left: 0;
+     }
+    }
+   }
+
+   th {
+    padding: 18px 0;
+    margin-bottom: 40px;
+
+    td {
+     color: #4069be;
+     font-size: 10px;
+     font-weight: 600;
+     text-transform: uppercase;
+     letter-spacing: 1.2px;
+    }
+   }
+
+   tr {
+    padding: 15px 0;
+
+    td {
+     font-family: FuturaPTBook, sans-serif;
+     &:nth-child(even) {
+      color: #104982;
+     }
+    }
+   }
+  }
+
+  .page-slider-section.home-reviews .main-content {
+   padding-top: 0;
+   margin-top: 60px;
+
+   .home-reviews-slide {
+    padding-top: 20px;
+   }
+  }
  }
+
+ .blue-section {
+
+  .main-content {
+
+   >h1, > h2, > h3, > h4, > h5, > h5, > h6, > p, > ul, > ol {
+    padding-left: 0;
+    @include tablet-mobile {
+     padding: 0;
+    }
+    &:first-child {
+     margin-top: 0;
+    }
+    &:last-child {
+     margin-bottom: 0;
+    }
+   }
+  }
+ }
+}
+
+.page-slide-inner {
+
+ img {
+  display: block;
+  max-width: 100%;
+  max-height: 120px;
+  height: auto;
+  margin-bottom: 25px;
+ }
+
+ p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+ }
+}
+
+.custom-radio {
+
+ &.input-dev, &.input-design, &.input-marketing, &.input-audit {
+  display: none;
+ }
+}
+
+
+.banner.filter_white .filter_block{
+ width: 100%;
+ height: 100%;
+ background: rgba(255,255,255,0.85);
+ justify-content: flex-end;
+ padding: 190px 270px 40px;
+ position: absolute;
 }

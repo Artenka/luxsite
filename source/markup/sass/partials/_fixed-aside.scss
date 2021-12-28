@@ -23,8 +23,13 @@
  width: 50px;
  height: 60px;
  border-radius: 4px;
- background: url(../img/common/message-icon.png) no-repeat center, #4069be;
+ border: 1px solid #4069be;
+ background: url(../img/common/message-icon.png) no-repeat center, transparent;
+ transition: 0.5s;
  cursor: pointer;
+ &:hover {
+  background: url(../img/common/message-icon-hover.png) no-repeat center, #4069be;
+ }
 }
 
 .discuss-order {

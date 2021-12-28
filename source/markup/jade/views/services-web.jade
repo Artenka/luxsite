@@ -1,0 +1,50 @@
+extends ../layouts/main
+
+block contents
+
+  include ../partials/header
+
+  .main#page
+    section.banner.blog-banner.home-intro.services-intro(style="background-image: url(img/services/web/services-web-banner.jpg)")
+      h1.banner-title.title Разработка сайтов
+
+    section.section.page-content
+      .main-content
+        h2 Мы используем CMS и фреймворки
+
+        .home-reviews.page-slider-section
+          .main-content
+            .page-slider.home-reviews-slider.slick-slider--arrow-blue
+              .home-reviews-slide
+                .page-slide-inner
+                  img(src="img/home/team/home-team-item.jpg")
+                  p Opencart для создания небольших интернет-магазинов или для старта. Opencart — это быстрота работы, простота и доступность в пользовании.
+              .home-reviews-slide
+                .page-slide-inner
+                  img(src="img/home/team/home-team-item.jpg")
+                  p Opencart для создания небольших интернет-магазинов или для старта. Opencart — это быстрота работы, простота и доступность в пользовании.
+
+            .slider-counter.home-reviews-slider-counter <span class="slider-counter__current">1</span>/<span class="slider-counter__total">1</span>
+
+
+    section.section.home-action
+      .main-content
+        h2.title.title--white.home-action__title
+          | Мы потратим всего 10 минут <br class="br-lg-md">
+          | на то, что может занять у вас весь день!
+        button(onclick="showPopup('#popup-brief')").popup-link.home-action__btn.btn.btn--transparent Заказать поддержку
+
+    include ../pages-partials/services/services
+    include ../pages-partials/home/contacts
+
+  include ../partials/footer
+  include ../partials/popups/popup-brief
+  include ../partials/popups/popup-audit
+
+
+  script.
+    $(function(){
+      $('.services-faq-item__title, .services-faq-item__close').click(function(){
+        $(this).closest('.services-faq-item').find('.services-faq-item__text').slideToggle(300);
+      });
+    });

@@ -1,25 +1,67 @@
 section.section.home-team#team
   .main-content
     h3.caption.home-team__caption Команда
-    h2.title.home-team__title Мы знаем, что успех Вашего<br class="br-md"> бизнеса<br class="br-lg"> и нашей компании зависит<br class="br-md"> от каждого<br class="br-lg"> её сотрудника.
+    h2.title.home-team__title Мы знаем, что ключ к успеху -<br class="br-lg-md"> сильная команда
     p.home-team__text Поэтому мы создали и постоянно повышаем качество команды профессионалов и улучшаем условия для ее эффективной и комфортной работы. Кроме обеспечения конкурентоспособных условий труда, мы реализуем только те мероприятия, которые поддерживает вся команда.
 
-    ul.home-team-list
-      li.home-team-item
-        .home-team-item__thumb(style="background-image: url(img/home/team/home-team-item.jpg)")
-        h2.home-team-item__name Александр
-        h3.home-team-item__position Управляющий партнер
-      li.home-team-item
-        .home-team-item__thumb(style="background-image: url(img/home/team/home-team-item.jpg)")
-        h2.home-team-item__name Александр
-        h3.home-team-item__position Управляющий партнер
-      li.home-team-item
-        .home-team-item__thumb(style="background-image: url(img/home/team/home-team-item.jpg)")
-        h2.home-team-item__name Александр
-        h3.home-team-item__position Управляющий партнер
-      li.home-team-item
-        .home-team-item__thumb(style="background-image: url(img/home/team/home-team-item.jpg)")
-        h2.home-team-item__name Александр
-        h3.home-team-item__position Управляющий партнер
+    ul.home-team-list.home-team-slider.slick-slider--arrow-blue
+      .home-team-item-slide
+        li.home-team-item
+          .home-team-item__thumb(style="background-image: url(img/home/team/home-team-item.jpg)")
+          h2.home-team-item__name Александр
+          h3.home-team-item__position Управляющий партнер
+      .home-team-item-slide
+        li.home-team-item
+          .home-team-item__thumb(style="background-image: url(img/home/team/home-team-item.jpg)")
+          h2.home-team-item__name Александр
+          h3.home-team-item__position Управляющий партнер
+      .home-team-item-slide
+        li.home-team-item
+          .home-team-item__thumb(style="background-image: url(img/home/team/home-team-item.jpg)")
+          h2.home-team-item__name Александр
+          h3.home-team-item__position Управляющий партнер
+      .home-team-item-slide
+        li.home-team-item
+          .home-team-item__thumb(style="background-image: url(img/home/team/home-team-item.jpg)")
+          h2.home-team-item__name Александр
+          h3.home-team-item__position Управляющий партнер
+      .home-team-item-slide
+        li.home-team-item
+          .home-team-item__thumb(style="background-image: url(img/home/team/home-team-item.jpg)")
+          h2.home-team-item__name Александр
+          h3.home-team-item__position Управляющий партнер
+
+    .home-team-slider-footer
+      .home-team-slider-footer__line
+      .slider-counter.home-team-slider-counter <span class="home-team-slider-counter__current">1</span>/<span class="home-team-slider-counter__total">1</span>
 
     a(href="#").home-team__more.btn Узнать больше о нас
+
+script.
+  $(function () {
+    $homeTeamSlider = $('.home-team-slider');
+    $homeTeamSlider.slick({
+      adaptiveHeight: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 1240,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });

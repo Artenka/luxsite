@@ -18,7 +18,7 @@
 }
 
 .home-services-list {
- @extend .hidden-scroll;
+ //@extend .hidden-scroll;
  display: flex;
  flex-wrap: wrap;
  border-top: 1px solid rgba(255,255,255,0.1);
@@ -28,9 +28,21 @@
  }
  @include mobile {
   width: 100%;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  display: block;
+  //flex-wrap: nowrap;
+  //overflow-x: auto;
   margin: 40px 0 0;
+ }
+
+ .slick-arrow {
+  bottom: -50px;
+
+  &.slick-prev {
+   left: 53px;
+  }
+  &.slick-next {
+   left: 195px;
+  }
  }
 }
 
@@ -49,7 +61,8 @@
   padding: 50px 35px;
  }
  @include mobile {
-  width: 270px;
+  width: 100%;
+  //width: 270px;
   padding: 50px 30px;
  }
  &:before {

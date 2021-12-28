@@ -25,14 +25,17 @@
 }
 
 .slick-arrow {
- width: 18px;
- height: 6px;
- background: no-repeat center / contain;
+ width: 72px;
+ height: 24px;
+ //width: 18px;
+ //height: 6px;
+ background: no-repeat center / 18px;
  font-size: 0;
  position: absolute;
  cursor: pointer;
  outline: none;
  transition: 0.5s;
+ z-index: 10;
 
  &.slick-prev {
   background-image: url(../img/common/arrow-left-white.svg);

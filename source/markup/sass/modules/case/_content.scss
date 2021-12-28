@@ -2,11 +2,58 @@
 
  .main-content {
   padding: 120px 0 0;
+  @include mobile {
+   padding-top: 90px;
+  }
+
+  li {
+   position: relative;
+   margin-bottom: 12px;
+   &:last-child {
+    margin-bottom: 0;
+   }
+  }
+
+  > ul, > ol {
+   margin: 30px 0;
+  }
+
+  > ul {
+
+   li {
+    padding-left: 28px;
+    &:before {
+     content: '';
+     width: 4px;
+     height: 4px;
+     border-radius: 50%;
+     background-color: #4069be;
+     position: absolute;
+     top: 8px;
+     left: 8px;
+    }
+   }
+  }
+
+  > ol {
+
+   li {
+    list-style: decimal;
+    padding-left: 8px;
+    margin-left: 20px;
+   }
+  }
  }
 
  h1, h2, h3, h4, h5, h5, h6, p, ul, ol {
-  max-width: 800px;
-  padding: 0 83px;
+  //max-width: 800px;
+  padding: 0 273px 0 83px;
+  @include tablet {
+   padding: 0 70px;
+  }
+  @include mobile {
+   padding: 0 15px;
+  }
  }
  h1, h2, h3, h4, h5, h6 {
   color: #4069be;
@@ -17,26 +64,44 @@
  h1 {
   font-size: 48px;
   margin-bottom: 60px;
+  @include mobile {
+   margin-bottom: 40px;
+  }
  }
  h2 {
   font-size: 42px;
   margin-bottom: 45px;
+  @include mobile {
+   margin-bottom: 30px;
+  }
  }
  h3 {
   font-size: 34px;
   margin-bottom: 40px;
+  @include mobile {
+   margin-bottom: 25px;
+  }
  }
  h4 {
   font-size: 28px;
   margin-bottom: 35px;
+  @include mobile {
+   margin-bottom: 20px;
+  }
  }
  h5 {
   font-size: 24px;
   margin-bottom: 30px;
+  @include mobile {
+   margin-bottom: 20px;
+  }
  }
  h6 {
   font-size: 20px;
   margin-bottom: 25px;
+  @include mobile {
+   margin-bottom: 20px;
+  }
  }
 
  p, li {
@@ -45,19 +110,68 @@
   font-size: 18px;
   line-height: 20px;
   margin: 25px 0;
+  @include mobile {
+   margin: 20px 0;
+  }
  }
 
  img, iframe {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 100px auto;
-  &:last-child {
-   margin-bottom: 0;
-  }
+  margin: 75px auto;
  }
 
  img.main-content__img-min {
   margin-left: 83px;
+  @include tablet-mobile {
+   margin-left: 0;
+  }
+ }
+
+ table {
+  border-top: 1px solid rgba(0,0,0,0.1);
+
+  tr, th {
+   border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  td {
+   color: rgba(0,0,0,0.5);
+   font-size: 18px;
+   line-height: 20px;
+   padding: 15px 25px 15px 0;
+
+   &:nth-child(1) {
+    padding-left: 83px;
+    @include mobile {
+     padding-left: 0;
+    }
+   }
+  }
+
+  th {
+   padding: 18px 0;
+   margin-bottom: 40px;
+
+   td {
+    color: #4069be;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+   }
+  }
+
+  tr {
+   padding: 15px 0;
+
+   td {
+    font-family: FuturaPTBook, sans-serif;
+    &:nth-child(even) {
+     color: #104982;
+    }
+   }
+  }
  }
 }

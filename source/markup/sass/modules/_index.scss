@@ -20,12 +20,16 @@ body {
   width: 710px;
  }
  @include mobile {
-  width: 310px;
+  width: 100%;
+  //width: 310px;
  }
 }
 
 .main {
  //overflow-x: hidden;
+ @include mobile {
+  overflow-x: hidden;
+ }
 
  &.main--standard {
   padding-top: 200px;
@@ -41,7 +45,8 @@ body {
   width: calc(100vw - 30px);
  }
  @include mobile {
-  width: 320px;
+  width: 100%;
+  //width: 320px;
   padding: 0 15px;
   margin: 0 auto;
  }
@@ -277,11 +282,16 @@ button {
  outline: none;
 }
 
+li {
+ list-style: none;
+}
+
 em {
  font-style: italic;
 }
 
 b, strong {
+ font-size: inherit;
  font-weight: 700;
 }
 
@@ -341,7 +351,7 @@ input:-webkit-autofill {
  align-items: center;
  position: relative;
 
- input[type="radio"] {
+ input[type="radio"], input[type="checkbox"] {
   width: 0;
   height: 0;
   padding: 0;

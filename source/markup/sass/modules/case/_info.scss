@@ -2,6 +2,12 @@
 
  .main-content {
   padding: 75px 83px 95px;
+  @include tablet {
+   padding: 75px 70px 95px;
+  }
+  @include mobile {
+   padding: 70px 15px;
+  }
  }
 }
 
@@ -12,6 +18,10 @@
 
 .case-info-item {
  margin-right: 15px;
+ @include mobile {
+  width: 100%;
+  margin: 0 0 30px;
+ }
  &:nth-child(1) {
   width: 210px;
  }
@@ -35,6 +45,9 @@
   text-transform: uppercase;
   letter-spacing: 1.32px;
   margin-bottom: 35px;
+  @include mobile {
+   margin-bottom: 15px;
+  }
  }
 
  .case-info-item__text {

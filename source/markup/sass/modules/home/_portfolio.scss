@@ -48,7 +48,7 @@
    color: #426bbb;
   }
   .home-portfolio-item__image {
-   opacity: 1;
+   //opacity: 1;
   }
  }
  &:last-child {
@@ -69,8 +69,8 @@
 
  .home-portfolio-item__content {
   flex: 1;
-  position: relative;
-  z-index: 2;
+  //position: relative;
+  //z-index: 2;
  }
 
  .home-portfolio-item__image {
@@ -137,4 +137,8 @@
  &:last-child {
   margin-right: 0;
  }
+}
+
+.hover-reveal {
+ z-index: 99;
 }

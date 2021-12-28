@@ -1,6 +1,9 @@
 script(src='js/intlTelInput.min.js' type='text/javascript')
 script(src='js/slick.min.js' type='text/javascript')
 script(src='js/TweenMax.min.js' type='text/javascript')
+script(src='js/charming.min.js' type='text/javascript')
+script(src='js/imagesloaded.pkgd.min.js' type='text/javascript')
+script(src='js/imageRevealHover.js' type='text/javascript')
 
 script.
   $(function () {
@@ -97,6 +100,27 @@ script.
           return h + 23;
         });
       }
+    });
+
+    // services faq
+    $('.services-faq-item__title, .services-faq-item__close').click(function () {
+      $(this).closest('.services-faq-item').find('.services-faq-item__text').slideToggle(300);
+    });
+
+    // page slider
+    $pageSlider = $('.page-slider');
+    $counterCurrent = $pageSlider.next('.slider-counter').find('.slider-counter__current');
+    $counterTotal = $pageSlider.next('.slider-counter').find('.slider-counter__total');
+    sliderCounter($pageSlider, $counterCurrent, $counterTotal);
+
+    $pageSlider.slick({
+      adaptiveHeight: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      variableWidth: true
     });
   });
 

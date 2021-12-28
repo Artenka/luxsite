@@ -1,62 +1,111 @@
 section.section.home-services#services
   .main-content
     h3.caption.home-services__caption Услуги
-    h2.title.title--white.home-services__title Мы знаем как работать<br class="br-md"> комплексно<br class="br-lg"> и точечно
+    h2.title.title--white.home-services__title LuxSite - это полный комплекс услуг<br class="br-lg-md"> по разработке и маркетингу:
 
-    ul.home-services-list
+    ul.home-services-list.home-services-slider
       a(href="/website").home-services-item
         h3.home-services-item__title Разработка
         p.home-services-item__text
+          | Лендинги
+          br
           | Корпоративные сайты
           br
-          | Интернет магазины
+          | Интернет-магазины
           br
-          | Порталы
-          br
-          | Лендинги
+          | Web & mobile приложения
       a(href="/seo").home-services-item
         h3.home-services-item__title Продвижение сайтов SEO
         p.home-services-item__text
-          | Продвижение сайтов (SEO)
-          br
           | SEO аудит сайтов
           br
-          | Контекстная реклама
-          br
           | Юзабилити аудит
-      a(href="/ppc").home-services-item
-        h3.home-services-item__title Контекстная реклама
-        p.home-services-item__text
-          | Рекламные стратегии
           br
-          | Брендинговые стратегии
+          | SEO продвижение сайтов
+          br
+          | SEO копирайтинг
+      a(href="/ppc").home-services-item
+        h3.home-services-item__title Контекстная реклама PPC
+        p.home-services-item__text
+          | Разработка рекламной стратегии
           br
           | Поисковая реклама
           br
-          | Оптимизация аккаунтов
-      a(href="/web-analytics").home-services-item
-        h3.home-services-item__title Аналитика и аудит
-        p.home-services-item__text
-          | Разработка прототипов
+          | Медийная реклама
           br
-          | Дизайн сайтов
-          br
-          | Брендирование
-          br
-          | Разработка контента
+          | Аналитика и оптимизация
       a(href="/smm").home-services-item
         h3.home-services-item__title Социальные сети SMM
         p.home-services-item__text
-          | Создание групп
+          | Создание и ведение бизнес страниц
           br
-          | Поддержка групп
+          | Оформление страниц и постов
           br
-          | Реклама в социальных сетях
+          | Интерактивы
           br
-          | Таргет
-      a(href="/support").home-services-item
-        h3.home-services-item__title Техническая поддрежка
+          | Реклама в соцсетях (таргетинг)
+      a(href="#").home-services-item
+        h3.home-services-item__title Дизайн и упаковка бизнеса
         p.home-services-item__text
-          | Администрирование серверов
+          | Дизайн сайтов и приложений
           br
-          | Исправление и доработка<br> сайтов
+          | Разработка айдентики, брендинг
+          br
+          | Дизайн для соц. сетей и рекламы
+          br
+          | Дизайн полиграфии
+      a(href="#").home-services-item
+        h3.home-services-item__title PR и SERM
+        p.home-services-item__text
+          | Разработка PR стратегии
+          br
+          | Ведение PR компаний
+          br
+          | Написание PR статей
+          br
+          | Управление репутацией SERM
+      a(href="#").home-services-item
+        h3.home-services-item__title YouTube и видео продакшн
+        p.home-services-item__text
+          | Продвижение YouTube канала
+          br
+          | Съемка видео
+          br
+          | Создание промо роликов
+          br
+          | Монтаж и обработка
+      a(href="#").home-services-item
+        h3.home-services-item__title Копирайтинг и контент
+        p.home-services-item__text
+          | Написание продающих текстов
+          br
+          | Написание контент-статей
+          br
+          | Тексты для Email рассылок
+          br
+          | Разработка контент-стратегии
+      a(href="#").home-services-item
+        h3.home-services-item__title Комплексный маркетинг
+        p.home-services-item__text
+          | Маркетинг-аудит и консалтинг
+          br
+          | Разработка маркетинг-стратегий
+          br
+          | Подбор каналов продвижения
+          br
+          | Разработка системы KPI
+
+script.
+  $(function () {
+    if($(window).width() < 767) {
+      $homeServicesSlider = $('.home-services-slider');
+      $homeServicesSlider.slick({
+        adaptiveHeight: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false
+      });
+    }
+  });
